@@ -1,0 +1,178 @@
+<!DOCTYPE html> 
+
+<html>
+<head>
+    <title>Hi, I'm Max</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="main.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" type="text/css" href="sushimaker.css" /> -->
+    <!-- <link rel="stylesheet" type="text/css" href="loader.css" /> -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Poppins:400,500i,900i|VT323&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/60e9e40432.js" crossorigin="anonymous"></script>
+    <script src="jquery-3.5.1.min.js"></script>
+
+    <style>
+        body,html {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+        }
+
+        .banner {
+            text-align: center;
+            width: 100%;
+            height: 100%;
+            color:#010101;
+            box-sizing: border-box;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            display: flex;
+            flex-direction: vertical;
+            justify-content: center;
+            margin: auto;
+            vertical-align: middle;
+        }
+
+        .first {
+            background-image: url("sushimaker_homepage.png");
+
+        }
+
+        .second {
+            background-image: url("recipeexample.png");
+        }
+
+        .third {
+            background-image: url("assets/img/dog5.jpg")
+        }
+
+        .fourth {
+            background-image: url("assets/img/dog10.jpg");
+        }
+
+        .fifth {
+            background-image: url("assets/img/dog11.jpg");
+        }
+
+
+    </style>
+</head>
+<!-- 9e9e9e -->
+
+
+<body>
+
+    <header>
+        <nav class="navbar" id="nav">
+            <a class="item siteName" href="index.html">Home</a>
+            <a class="item" href="about.html">About</a>
+            <a class="item" href="projects.html">Projects</a>
+            <a class="item" href="photography.html">Photography</a>
+            <a class="item" href="contact.html">Contact</a>
+            <a class="item" href="resume.html">Resume</a>
+            <a class="item icon" href="javascript:void(0);" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </nav>
+    </header>
+
+    <section class="container cover grey">
+        <div class="row">
+            <div class="column-two">
+                <div class="wrapper">
+                    <h1 class="cover-heading" style="color: #ffffff; font-family: 'Press Start 2P', cursive;">SushiMaker</h1>
+                    <a href="https://github.com/anavianm/SushiMaker"><i class="fab fa-github" style="font-size: 5em; text-decoration: none; color: white; padding-bottom: 10px;"></i></a>
+                    <p class="description" style="color: #ffffff; font-family: 'Press Start 2P', cursive;">A simple recipe app with Node.Js and Okta authentication</p>
+                </div>
+            </div>
+            <div class="column-two">
+                <img src="Conveyor with sushi.gif" alt="Sushi Conveyor" />
+                <!-- image link: https://dribbble.com/shots/5253258-Pup -->
+            </div>
+        </div>
+    </section>
+
+    <section class="banner first"></section>
+
+    <section class="container white">
+        <div class="wrapper">
+            <h2>Recipes Made Easy</h2>
+            <p class="description">Select what ingredients you have, and get customized results</p>
+        </div>
+
+    </section>
+
+    <section class="banner second"></section>
+
+    <section class="container white" id="whatToDo">
+
+        <div class="wrapper">
+            <h2>Easy to read</h2>
+            <p class="description">Select what ingredients you have, and get customized results</p>
+        </div>
+
+    </section>
+
+    <section class="container salmon" id="whatToDo">
+        <div class="row">
+            <div class="column-three">
+                <div class="wrapper-icon">
+                    <i class="fas fa-lock" style="font-size: 5em;"></i>
+                    <h3>Complete With Authentication</h3>
+                    <p>Signup and log in to save <br /> and like your recipes</p>
+                    
+                </div>
+            </div>
+            <div class="column-three">
+                <div class="wrapper-icon">
+                    <i class="fas fa-user-circle" style="font-size: 5em;"></i>
+                    <h3>Okta Login</h3>
+                    <p>Secure accounts with Okta <br /> authentication and dashboard functionality</p>
+                </div>
+            </div>
+            <div class="column-three">
+                <div class="wrapper-icon">
+                    <i class="fas fa-volume-up" style="font-size: 5em;"></i>
+                    <h3>Voice Assist</h3>
+                    <p>Have the site read the recipe<br /> to you when your hands are dirty!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+</body>
+
+    
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
