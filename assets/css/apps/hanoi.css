@@ -1,0 +1,76 @@
+/* ---------- Tower of Hanoi ---------- */
+.hanoi { display: flex; flex-direction: column; height: 100%; padding: 4px; gap: 6px; }
+.hn-toolbar { display: flex; flex-wrap: wrap; align-items: center; gap: 4px; flex: none; }
+.hn-toolbar button { height: 24px; padding: 0 12px; font: 400 11px/1 var(--font); color: var(--ink); }
+.hn-label { display: inline-flex; align-items: center; gap: 6px; margin-right: 4px; }
+.hn-disks {
+  height: 22px; font: 400 11px/1 var(--font); background: #fff; border: 0; padding: 0 2px;
+  box-shadow: inset -1px -1px var(--hi), inset 1px 1px var(--lo), inset -2px -2px #e4e4e4, inset 2px 2px var(--dk);
+}
+.hn-count { margin-left: auto; padding: 5px 10px; background: #fff; white-space: pre; }
+
+.hn-board {
+  flex: 1; min-height: 210px; position: relative;
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px;
+  padding: 14px 14px 26px;
+  background: radial-gradient(ellipse at 50% 30%, #1d8a4c, #0d6435 75%);
+  box-shadow: inset -1px -1px var(--hi), inset 1px 1px var(--lo), inset -2px -2px #e4e4e4, inset 2px 2px var(--dk);
+}
+.hn-peg {
+  position: relative; z-index: 1;
+  display: flex; flex-direction: column; justify-content: flex-end; align-items: center;
+  padding: 0 0 2px; border: 0; background: none; cursor: pointer; min-width: 0;
+}
+.hn-peg:focus-visible { outline: 1px dotted #fff; outline-offset: 2px; }
+.hn-peg:hover .hn-rod { background: linear-gradient(90deg, #a0652b, #e0a060, #a0652b); }
+.hn-rod {
+  position: absolute; left: 50%; bottom: 0; top: 18px; width: 10px; transform: translateX(-50%);
+  background: linear-gradient(90deg, #6e4119, #c27f3e, #6e4119); border-radius: 4px 4px 0 0;
+  box-shadow: 1px 0 0 rgba(0,0,0,.35);
+}
+.hn-stack {
+  position: relative; width: 100%;
+  display: flex; flex-direction: column-reverse; align-items: center;
+}
+.hn-disk {
+  height: 22px; margin-top: 2px; border-radius: 3px; flex: none;
+  display: grid; place-items: center;
+  color: rgba(255,255,255,.92); font: 700 11px/1 var(--font); text-shadow: 1px 1px 0 rgba(0,0,0,.45);
+  background: var(--c);
+  box-shadow: inset 2px 2px rgba(255,255,255,.45), inset -2px -2px rgba(0,0,0,.35), 1px 2px 0 rgba(0,0,0,.35);
+  transition: transform .14s ease-out;
+}
+.hn-peg.selected .hn-disk:last-child { transform: translateY(-26px); box-shadow: inset 2px 2px rgba(255,255,255,.45), inset -2px -2px rgba(0,0,0,.35), 0 10px 8px rgba(0,0,0,.35); }
+.hn-peg.selected .hn-rod { background: linear-gradient(90deg, #b88a1a, #ffe08a, #b88a1a); }
+.hn-key {
+  position: absolute; bottom: -22px; left: 50%; transform: translateX(-50%);
+  color: rgba(255,255,255,.7); font: 400 11px/1 var(--font);
+}
+.hn-base {
+  position: absolute; left: 10px; right: 10px; bottom: 22px; height: 10px; z-index: 0;
+  background: linear-gradient(180deg, #c27f3e, #7a4a1d); border-radius: 2px;
+  box-shadow: 0 2px 0 rgba(0,0,0,.35);
+}
+.hn-peg.shake { animation: hn-shake .32s ease-in-out; }
+@keyframes hn-shake { 20%, 60% { transform: translateX(-5px); } 40%, 80% { transform: translateX(5px); } }
+.hn-busy .hn-peg { cursor: progress; }
+
+.hn-msg { flex: none; padding: 7px 10px; background: #fff; min-height: 30px; font-size: 12px; }
+.hn-msg[data-kind="error"] { color: #a3201a; }
+.hn-msg[data-kind="won"] { color: #0b6b2a; font-weight: 700; }
+.hn-status {
+  flex: none; display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 3px 6px;
+  box-shadow: inset -1px -1px var(--hi), inset 1px 1px var(--lo);
+}
+.hn-timing { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.hn-link { border: 0; background: none; padding: 0; color: var(--title-a); text-decoration: underline; cursor: pointer; font: inherit; white-space: nowrap; }
+
+/* phones */
+@media (max-width: 700px) {
+  .hn-toolbar button, .hn-disks { height: 32px; }
+  .hn-count { margin-left: 0; flex: 1 1 100%; text-align: center; }
+  .hn-disk { height: 26px; font-size: 11px; }
+  .hn-peg.selected .hn-disk:last-child { transform: translateY(-32px); }
+  .hn-board { padding: 10px 6px 26px; gap: 4px; }
+  .hn-timing { display: none; }
+}

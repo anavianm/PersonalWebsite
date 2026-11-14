@@ -1,0 +1,140 @@
+/* ---------- photos ---------- */
+.photos { display: flex; flex-direction: column; height: 100%; padding: 4px 4px 4px; }
+
+/* Win98 tab control */
+.tabs { display: flex; padding-left: 2px; position: relative; z-index: 1; flex: none; }
+.tab {
+  position: relative; margin-right: -1px; padding: 4px 14px 3px; margin-top: 2px;
+  background: var(--face); border: 0; border-radius: 3px 3px 0 0; cursor: pointer;
+  font: 400 11px/1.2 var(--font);
+  box-shadow: inset 1px 1px var(--hi), inset -1px 0 var(--dk), inset -2px 0 var(--lo), inset 2px 2px #e4e4e4;
+}
+.tab[aria-selected="true"] {
+  margin-top: 0; padding: 5px 16px 6px; margin-bottom: -3px; margin-left: -2px; margin-right: -3px; z-index: 2;
+}
+.tab:focus-visible { outline: 1px dotted var(--dk); outline-offset: -5px; }
+.tab-body {
+  flex: 1; min-height: 0; display: flex; flex-direction: column; padding: 8px 6px 6px;
+  box-shadow: inset -1px -1px var(--dk), inset 1px 1px var(--hi), inset -2px -2px var(--lo), inset 2px 2px #e4e4e4;
+}
+.ph-viewer { flex: 1; min-height: 0; display: flex; flex-direction: column; }
+.ph-viewer[hidden], .ph-gallery[hidden] { display: none; }
+
+/* gallery: every photo at once, masonry columns */
+.ph-gallery {
+  flex: 1; min-height: 0; overflow: auto; background: #0d0d0d; padding: 10px;
+  box-shadow: inset -1px -1px var(--hi), inset 1px 1px var(--lo), inset -2px -2px #e4e4e4, inset 2px 2px var(--dk);
+  scrollbar-color: #6b6b6b #0d0d0d;
+}
+.gallery { --row: 150px; display: flex; flex-wrap: wrap; gap: 8px; }
+.gallery::after { content: ""; flex: 999 1 0; } /* keeps the last row from stretching */
+.tile {
+  display: block; padding: 0; border: 0; background: #000; min-width: 0;
+  cursor: pointer; position: relative; overflow: hidden;
+}
+.tile img { display: block; width: 100%; height: 100%; object-fit: cover; opacity: .9; transition: opacity .15s, transform .15s; }
+.tile:hover img, .tile:focus-visible img { opacity: 1; }
+.tile:hover, .tile:focus-visible { outline: 2px solid #f2a93b; outline-offset: 2px; }
+.tile[aria-current="true"] { outline: 2px solid #f2a93b; outline-offset: 2px; }
+.ph-toolbar { display: flex; align-items: center; gap: 4px; padding: 2px 2px 6px; flex: none; }
+.ph-toolbar button, .ph-full {
+  height: 24px; padding: 0 10px; display: inline-flex; align-items: center; gap: 4px;
+  font: 400 11px/1 var(--font); color: var(--ink); text-decoration: none; white-space: nowrap;
+}
+.ph-toolbar b { font-weight: 400; font-size: 9px; }
+.ph-sep { width: 2px; height: 20px; margin: 0 4px; border-left: 1px solid var(--lo); border-right: 1px solid var(--hi); }
+.ph-count { margin-left: auto; padding: 5px 10px; background: #fff; min-width: 70px; text-align: center; }
+.ph-stage {
+  flex: 1; min-height: 0; position: relative;
+  display: grid; place-items: center; overflow: hidden;
+  background: #0d0d0d; touch-action: pan-y; user-select: none;
+  box-shadow: inset -1px -1px var(--hi), inset 1px 1px var(--lo), inset -2px -2px #e4e4e4, inset 2px 2px var(--dk);
+}
+/* The photo is pinned to the stage (8px inset) and object-fit scales it to fit whole,
+   whatever its size or shape. (A % max-height doesn't work here: the grid cell's
+   height comes from its content, so tall or large photos overflowed the stage.) */
+.ph-img {
+  position: absolute; inset: 8px; width: calc(100% - 16px); height: calc(100% - 16px);
+  object-fit: contain;
+  transition: opacity .18s ease; -webkit-user-drag: none;
+}
+.ph-img.loading { opacity: .35; }
+
+/* Info panel: camera details beside the photo */
+.ph-main { flex: 1; min-height: 0; display: flex; gap: 6px; position: relative; }
+.ph-main .ph-stage { min-width: 0; }
+.ph-info {
+  width: 200px; flex: none; overflow: auto; background: #fff; padding: 0 0 8px;
+  box-shadow: inset -1px -1px var(--hi), inset 1px 1px var(--lo), inset -2px -2px #e4e4e4, inset 2px 2px var(--dk);
+}
+.ph-info[hidden] { display: none; }
+.ph-info-title { padding: 6px 10px 5px; font-weight: 700; border-bottom: 1px solid var(--lo); margin: 2px 2px 6px; }
+.ph-info-list { margin: 0; padding: 0 10px; display: grid; grid-template-columns: max-content 1fr; gap: 4px 10px; }
+.ph-info-list dt { color: #555; }
+.ph-info-list dd { margin: 0; word-break: break-word; }
+.ph-info-list .ph-info-none { grid-column: 1 / -1; color: #666; font-style: italic; margin-top: 4px; }
+.ph-info-btn b {
+  display: inline-grid; place-items: center; width: 13px; height: 13px; border: 1px solid currentColor; border-radius: 50%;
+  font: italic 700 10px/1 Georgia, "Times New Roman", serif;
+}
+.ph-img:not([src]) { visibility: hidden; }
+
+/* 35mm film strip */
+.film {
+  flex: none; margin-top: 6px;
+  overflow-x: auto; overflow-y: hidden;
+  background: #1b130b;
+  scrollbar-width: thin; scrollbar-color: #6b5236 #1b130b;
+  box-shadow: inset 0 1px 0 #3a2a18, inset 0 -1px 0 #0a0704;
+}
+.film-track {
+  position: relative; display: flex; align-items: flex-start; gap: 12px;
+  width: max-content; padding: 26px 18px 38px;
+  background: linear-gradient(180deg, #24190e, #1b130b 30%, #1b130b 70%, #24190e);
+}
+.film-track::before, .film-track::after { /* sprocket holes */
+  content: ""; position: absolute; left: 0; right: 0; height: 12px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='19' height='12'%3E%3Crect x='5' y='2' width='9' height='8' rx='2' fill='%23efe2c6'/%3E%3C/svg%3E") repeat-x 3px 0 / 19px 12px;
+  opacity: .92;
+}
+.film-track::before { top: 7px; }
+.film-track::after { bottom: 7px; }
+.film-edge {
+  align-self: center; writing-mode: vertical-rl; transform: rotate(180deg);
+  color: #e89a3a; font: 700 11px/1 var(--font); letter-spacing: 2px; padding: 0 2px;
+}
+.frame {
+  position: relative; flex: none; width: 112px; height: 74px; padding: 0; border: 0;
+  background: #000; cursor: pointer;
+}
+.frame img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+  opacity: .62; filter: saturate(.85) sepia(.12);
+  transition: opacity .15s, filter .15s;
+}
+.frame:hover img, .frame:focus-visible img { opacity: .9; }
+.frame[aria-current="true"] img { opacity: 1; filter: none; }
+.frame[aria-current="true"] { box-shadow: 0 0 0 2px #1b130b, 0 0 0 4px #f2a93b; }
+.frame:focus-visible { outline: 1px dotted #f2a93b; outline-offset: 5px; }
+.fnum {
+  position: absolute; left: 2px; right: 2px; top: calc(100% + 4px);
+  display: flex; justify-content: space-between; align-items: center;
+  color: #e89a3a; font: 700 11px/1 var(--font); pointer-events: none;
+}
+.fnum i { font: 400 10px/1 system-ui, sans-serif; }
+
+/* phones */
+@media (max-width: 700px) {
+  .ph-toolbar [data-act="play"] span { display: inline; }
+  .ph-info {
+    position: absolute; left: 8px; right: 8px; bottom: 8px; width: auto; max-height: 48%;
+    background: rgba(255,255,255,.96); z-index: 1;
+  }
+  .ph-toolbar button, .ph-full { height: 32px; padding: 0 12px; }
+  .frame { width: 86px; height: 58px; }
+  .gallery { --row: 96px; gap: 6px; }
+  .ph-gallery { padding: 8px; }
+  .tab { padding: 7px 18px 5px; }
+  .tab[aria-selected="true"] { padding: 8px 20px 8px; }
+  .film-track { gap: 10px; padding: 24px 12px 36px; }
+}

@@ -1,0 +1,37 @@
+/* Design tokens, reset and page basics. Skins override the tokens.
+ *
+ * --accent, --accent-dark, --accent-light and --accent-ink are set on :root by
+ * assets/desktop.js from the wallpaper's dominant color ("Match colors to wallpaper"
+ * in Display Properties). When they're unset, every var(--accent…, fallback) below
+ * and in the skins falls back to that skin's own colors.
+ */
+:root {
+  --face: #c3c3c3;
+  --hi: #ffffff;
+  --lo: #828282;
+  --dk: #0b0b0b;
+  --title-a: var(--accent-dark, #0b2a78);
+  --title-b: var(--accent-light, #2a7fd4);
+  --title-off-a: #7b7b7b;
+  --title-off-b: #b4b4b4;
+  --ink: #111;
+  --select: var(--accent-dark, #0b2a78);
+  --taskbar-h: 36px;
+  --font: "Pixelated MS Sans Serif", Tahoma, Verdana, "Segoe UI", sans-serif;
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; margin: 0; }
+body {
+  background: #0d1020 url("../../../photos/photo_01.jpg") center / cover no-repeat;
+  color: var(--ink);
+  font: 11px/1.5 var(--font);
+  overflow: hidden;
+  -webkit-font-smoothing: none;
+  font-smooth: never;
+}
+button { font: inherit; color: inherit; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before { animation: none !important; transition: none !important; }
+}

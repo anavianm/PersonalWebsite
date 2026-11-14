@@ -1,0 +1,67 @@
+/* ---------- terminal: MOOP editor + output ---------- */
+.moop { display: flex; flex-direction: column; height: 100%; padding: 4px; gap: 6px; }
+.mp-toolbar { display: flex; flex-wrap: wrap; align-items: center; gap: 4px; flex: none; }
+.mp-toolbar button {
+  height: 24px; padding: 0 10px; display: inline-flex; align-items: center; gap: 5px;
+  font: 400 11px/1 var(--font); color: var(--ink);
+}
+.mp-toolbar button b { font-weight: 400; font-size: 9px; color: #087a2a; }
+.mp-run { font-weight: 700 !important; }
+.mp-label { margin: 0 2px 0 2px; }
+.mp-file {
+  height: 24px; max-width: 330px; min-width: 0; flex: 0 1 330px;
+  font: 400 11px/1 var(--font); color: var(--ink); background: #fff; border: 0; padding: 0 4px;
+  box-shadow: inset -1px -1px var(--hi), inset 1px 1px var(--lo), inset -2px -2px #e4e4e4, inset 2px 2px var(--dk);
+}
+.mp-panes { flex: 1; min-height: 0; display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: 6px; }
+.mp-editor-wrap, .mp-out {
+  min-height: 0; overflow: hidden;
+  box-shadow: inset -1px -1px var(--hi), inset 1px 1px var(--lo), inset -2px -2px #e4e4e4, inset 2px 2px var(--dk);
+}
+.mp-editor-wrap { display: flex; background: #fff; padding: 2px; }
+.mp-gutter, .mp-editor, .mp-out pre {
+  font: 13px/1.5 Consolas, "Cascadia Mono", "Courier New", ui-monospace, monospace;
+  -webkit-font-smoothing: auto;
+}
+.mp-gutter {
+  margin: 0; padding: 8px 8px 8px 6px; min-width: 38px; text-align: right;
+  color: #8a8a8a; background: #f1f1f1; border-right: 1px solid #d4d4d4;
+  overflow: hidden; user-select: none; flex: none;
+}
+.mp-editor {
+  flex: 1; min-width: 0; border: 0; outline: none; resize: none; margin: 0;
+  padding: 8px 10px; color: #111; background: #fff; tab-size: 4; white-space: pre; overflow: auto;
+}
+.mp-out { background: #0c0c0c; padding: 2px; overflow: auto; cursor: text; }
+.mp-out pre { margin: 0; padding: 8px 10px 0; color: #d6d6d6; white-space: pre-wrap; word-break: break-word; }
+.mp-line { display: flex; align-items: baseline; padding: 0 10px 10px; font: 13px/1.5 Consolas, "Cascadia Mono", "Courier New", ui-monospace, monospace; }
+.mp-cmd {
+  flex: 1; min-width: 0; margin: 0; padding: 0; border: 0; outline: none; background: transparent;
+  color: #fff; font: inherit; caret-color: #3fc46b;
+}
+.mp-busy .mp-line { visibility: hidden; }
+.t-prompt { color: #3fc46b; }
+.t-cmd { color: #fff; }
+.t-err { color: #ff7b72; }
+.t-dim { color: #8a8a8a; }
+.t-listing { color: #9cc4ff; }
+.mp-busy .mp-log::after { content: "compiling…"; color: #8a8a8a; animation: twinkle 1s steps(2) infinite; }
+.mp-busy .mp-toolbar button { cursor: progress; }
+.mp-status {
+  flex: none; display: flex; justify-content: space-between; gap: 12px; padding: 3px 6px;
+  box-shadow: inset -1px -1px var(--hi), inset 1px 1px var(--lo);
+}
+.mp-status span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.mp-status a { color: var(--title-a); white-space: nowrap; }
+
+/* phones */
+@media (max-width: 700px) {
+  .mp-panes { grid-template-columns: minmax(0, 1fr); grid-template-rows: minmax(0, 1.1fr) minmax(0, 1fr); }
+  .mp-file { flex: 1 1 100%; max-width: none; height: 32px; }
+  .mp-toolbar button { height: 32px; padding: 0 10px; }
+  .mp-label, .mp-toolbar .ph-sep { display: none; }
+  .mp-status span { display: none; }
+  .mp-gutter, .mp-editor, .mp-out pre, .mp-line { font-size: 12px; }
+  .mp-cmd { font-size: 16px; } /* 16px stops phones zooming in on focus */
+  .ph-toolbar button span { display: none; }
+}

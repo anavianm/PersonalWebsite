@@ -1,0 +1,109 @@
+/* Windows 10 skin. Loaded instead of win98.css.
+ * Flat and square; --acc (wallpaper accent, else Windows blue) colors the active
+ * title bar, window border, selection and the taskbar indicators. */
+:root {
+  --acc: var(--accent, #0078d7);
+  --face: #f0f0f0;
+  --hi: #ffffff;
+  --lo: #a0a0a0;
+  --dk: #333;
+  --title-a: var(--acc);
+  --title-b: var(--acc);
+  --select: var(--acc);
+  --ink: #000;
+  --taskbar-h: 40px;
+  --font: "Segoe UI", system-ui, -apple-system, Roboto, sans-serif;
+}
+body { font-size: 12px; -webkit-font-smoothing: antialiased; font-smooth: auto; }
+
+/* controls: flat gray buttons, accent border on hover */
+.bevel { background: #e1e1e1; border: 1px solid #adadad; border-radius: 0; box-shadow: none; }
+button.bevel { cursor: default; }
+button.bevel:hover, a.bevel:hover { background: #e5f1fb; border-color: var(--acc); }
+button.bevel:active, button.bevel[aria-pressed="true"], button.bevel[aria-expanded="true"] {
+  background: color-mix(in srgb, var(--acc) 18%, #fff); border-color: color-mix(in srgb, var(--acc) 80%, #000); box-shadow: none;
+}
+.bevel-in { box-shadow: inset 0 0 0 1px #7a7a7a; }
+:focus-visible { outline: 2px solid #000; outline-offset: -2px; }
+
+/* windows: 1px accent border, shadow, solid accent title bar when active */
+.win.bevel {
+  padding: 0; border: 1px solid var(--acc); background: #fff;
+  box-shadow: 0 0 0 0 transparent, 0 10px 30px rgba(0,0,0,.35);
+  animation: pop10 .12s ease-out;
+}
+@keyframes pop10 { from { transform: translateY(6px); opacity: 0; } }
+.win:not(.active).bevel { border-color: #aaa; box-shadow: 0 6px 18px rgba(0,0,0,.25); }
+.titlebar { height: 31px; padding: 0 0 0 10px; gap: 8px; background: #fff; color: #999; font: 400 12px/1 var(--font); }
+.win.active .titlebar { background: var(--acc); color: #fff; }
+/* caption buttons: wide, flat, thin glyphs; close turns red */
+.wbtn.bevel { width: 46px; height: 31px; border: 0; background: transparent; color: inherit; }
+.wbtn + .wbtn, .wbtn.close { margin-left: 0; }
+.wbtn svg { display: none; }
+.wbtn::before { font: 400 14px/1 "Segoe UI Symbol", "Segoe UI", sans-serif; }
+.wbtn.minimize::before { content: "\2014"; font-size: 11px; }
+.wbtn.maximize::before { content: "\25A1"; font-size: 16px; }
+.wbtn.close::before { content: "\2715"; }
+.wbtn.bevel:hover { background: rgba(255,255,255,.18); }
+.win:not(.active) .wbtn.bevel:hover { background: #e5e5e5; }
+.wbtn.close.bevel:hover { background: #e81123; color: #fff; }
+.win-body { margin-top: 0; }
+
+/* tabs: flat with an accent underline */
+.tab { background: transparent; border: 0; border-radius: 0; box-shadow: none; padding: 6px 14px; margin: 0; }
+.tab[aria-selected="true"] { margin: 0; padding: 6px 14px; box-shadow: inset 0 -2px 0 var(--acc); font-weight: 600; }
+.tab-body { box-shadow: inset 0 1px 0 #d9d9d9; background: #fff; }
+
+/* taskbar: dark acrylic tinted with the accent, icon-only task buttons */
+.taskbar {
+  padding: 0; gap: 0; box-shadow: none; color: #fff;
+  background: color-mix(in srgb, var(--acc) 18%, rgba(20,20,20,.9));
+  -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px);
+}
+.start.bevel {
+  width: 48px; height: 100%; padding: 0; justify-content: center; font-size: 0;
+  border: 0; background: transparent; color: #fff;
+}
+.start.bevel:hover, .start.bevel[aria-expanded="true"] { background: rgba(255,255,255,.12); }
+.start.bevel { gap: 0; } /* the "Start" text is hidden; its gap would push the logo off-center */
+.start-logo {
+  width: 16px; height: 16px; transform: perspective(28px) rotateY(-22deg);
+  background:
+    linear-gradient(#fff,#fff) 0 0 / 7.5px 7.5px no-repeat, linear-gradient(#fff,#fff) 8.5px 0 / 7.5px 7.5px no-repeat,
+    linear-gradient(#fff,#fff) 0 8.5px / 7.5px 7.5px no-repeat, linear-gradient(#fff,#fff) 8.5px 8.5px / 7.5px 7.5px no-repeat;
+}
+.tasks { gap: 0; }
+.task.bevel {
+  flex: 0 0 48px; min-width: 48px; height: 100%; padding: 0; justify-content: center;
+  border: 0; background: transparent; color: #fff;
+}
+.task span { display: none; }
+.task svg { width: 22px; height: 22px; }
+.task.bevel:hover { background: rgba(255,255,255,.12); }
+.task.bevel[aria-pressed="true"] {
+  font-weight: 400; background: rgba(255,255,255,.16);
+  box-shadow: inset 0 -2px 0 color-mix(in srgb, var(--acc) 60%, #fff);
+}
+.tray.bevel-in { height: 100%; color: #fff; box-shadow: none; background: none; font-size: 12px; }
+.tray-icon { color: #fff; }
+
+/* start menu: dark acrylic list */
+.start-menu.bevel {
+  left: 0; bottom: var(--taskbar-h); padding: 6px 0; border: 0; border-radius: 0; color: #fff;
+  background: color-mix(in srgb, var(--acc) 15%, rgba(31,31,31,.94));
+  -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px); box-shadow: 0 0 20px rgba(0,0,0,.5);
+  animation: none;
+}
+.start-menu .mi { font-size: 13px; padding: 9px 24px 9px 14px; color: #fff; }
+.start-menu .mi:hover, .start-menu .mi:focus-visible { background: rgba(255,255,255,.12); }
+.start-menu li.sep { border-color: rgba(255,255,255,.15) transparent transparent; }
+
+/* desktop icons: Segoe labels with a soft accent selection box */
+.icon { font: 400 12px/1.3 var(--font); }
+.icon.selected span, .icon:focus-visible span { background: color-mix(in srgb, var(--acc) 45%, transparent); outline: 1px solid color-mix(in srgb, var(--acc) 70%, #fff); }
+
+@media (max-width: 700px) {
+  .titlebar { height: 40px; }
+  .wbtn.bevel { height: 40px; width: 48px; }
+  .start.bevel { width: 56px; }
+}

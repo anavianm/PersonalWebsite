@@ -1,0 +1,51 @@
+/* ---------- Display Properties: wallpaper, window style, wallpaper-matched colors ---------- */
+.display { display: flex; flex-direction: column; gap: 8px; padding: 10px; }
+
+/* little monitor previewing the wallpaper and a window in the current skin */
+.dp-monitor { display: grid; justify-items: center; margin: 2px 0 4px; }
+.dp-screen {
+  position: relative; width: 210px; height: 140px; overflow: hidden;
+  background: #000 center / cover no-repeat;
+  border: 10px solid #c3c3c3; border-bottom-width: 14px;
+  box-shadow: inset 0 0 0 1px #000, 0 0 0 1px #6b6b6b, 2px 2px 0 1px #3d3d3d;
+}
+.dp-stand { width: 70px; height: 12px; background: linear-gradient(#a8a8a8, #7a7a7a); clip-path: polygon(20% 0, 80% 0, 100% 100%, 0 100%); }
+/* the preview reuses .win/.titlebar so it picks up whichever skin is loaded */
+.dp-screen .dp-mini {
+  position: absolute; left: 18px; top: 16px; width: 150px; height: auto;
+  min-width: 0; min-height: 0; resize: none; animation: none; zoom: .72; pointer-events: none;
+}
+.dp-mini .win-body { padding: 8px; font-size: 11px; }
+.dp-sel { background: var(--select); color: #fff; padding: 0 2px; }
+.dp-bar { position: absolute; left: 0; right: 0; bottom: 0; height: 8px; background: var(--face); }
+:root[data-skin="vista"] .dp-bar { background: #111; }
+:root[data-skin="win7"] .dp-bar { background: color-mix(in srgb, var(--acc) 50%, #1c2633); }
+:root[data-skin="win10"] .dp-bar { background: #1f1f1f; }
+:root[data-skin="xp"] .dp-bar { background: var(--acc); }
+
+.display .tab-body { padding: 10px; }
+.dp-label { margin: 0 0 6px; }
+.dp-walls {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; max-height: 172px; overflow: auto;
+  padding: 4px; background: #fff;
+  box-shadow: inset -1px -1px var(--hi), inset 1px 1px var(--lo);
+}
+.dp-wall { padding: 0; border: 2px solid transparent; background: none; cursor: pointer; aspect-ratio: 3 / 2; }
+.dp-wall img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.dp-wall[aria-checked="true"] { border-color: var(--select); }
+.dp-wall:focus-visible { outline: 1px dotted var(--ink); outline-offset: 1px; }
+
+.dp-skins { margin: 0 0 10px; padding: 6px 10px 8px; border: 1px solid var(--lo); display: grid; gap: 4px; }
+.dp-skins legend { padding: 0 4px; }
+.dp-radio, .dp-check { display: flex; align-items: center; gap: 6px; }
+.dp-swatches { display: flex; gap: 4px; margin-top: 8px; }
+.dp-swatches span { width: 32px; height: 14px; box-shadow: inset 0 0 0 1px rgba(0,0,0,.4); }
+
+.dp-actions { display: flex; justify-content: flex-end; }
+.dp-ok { min-width: 75px; height: 24px; }
+
+@media (max-width: 700px) {
+  .dp-walls { grid-template-columns: repeat(3, 1fr); max-height: none; }
+  .dp-screen .dp-mini { left: 18px !important; top: 16px !important; width: 150px !important; height: auto !important; }
+  .dp-ok { height: 34px; }
+}

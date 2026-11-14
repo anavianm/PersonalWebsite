@@ -1,0 +1,31 @@
+/* Windows 98 skin: fonts and the bevel system. The other skins replace this file. */
+/* MS Sans Serif recreation from 98.css (MIT) — https://github.com/jdan/98.css */
+@font-face {
+  font-family: "Pixelated MS Sans Serif";
+  src: url("https://unpkg.com/98.css@0.1.21/fonts/converted/ms_sans_serif.woff2") format("woff2");
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "Pixelated MS Sans Serif";
+  src: url("https://unpkg.com/98.css@0.1.21/fonts/converted/ms_sans_serif_bold.woff2") format("woff2");
+  font-weight: 700; font-style: normal; font-display: swap;
+}
+
+/* ---------- bevels ---------- */
+.bevel {
+  background: var(--face);
+  border: 0;
+  box-shadow: inset -1px -1px var(--dk), inset 1px 1px var(--hi),
+              inset -2px -2px var(--lo), inset 2px 2px #e4e4e4;
+}
+.bevel-in {
+  box-shadow: inset -1px -1px var(--hi), inset 1px 1px var(--lo),
+              inset -2px -2px #e4e4e4, inset 2px 2px var(--dk);
+}
+button.bevel { cursor: pointer; }
+button.bevel:active, button.bevel[aria-pressed="true"], button.bevel[aria-expanded="true"] {
+  box-shadow: inset -1px -1px var(--hi), inset 1px 1px var(--dk),
+              inset -2px -2px #e4e4e4, inset 2px 2px var(--lo);
+}
+:focus-visible { outline: 2px dotted #fff; outline-offset: -4px; }
+.bevel:focus-visible, .win :focus-visible { outline-color: var(--dk); }

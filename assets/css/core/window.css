@@ -1,0 +1,54 @@
+/* ---------- windows ---------- */
+.win {
+  position: absolute;
+  display: flex; flex-direction: column;
+  min-width: 260px; min-height: 140px;
+  max-width: calc(100vw - 16px);
+  max-height: calc(100% - 8px);
+  padding: 4px;
+  resize: both; overflow: hidden;
+  animation: pop .14s ease-out;
+}
+@keyframes pop { from { transform: scale(.96); opacity: 0; } }
+.win[hidden] { display: none; }
+.win.max {
+  left: 0 !important; top: 0 !important;
+  width: 100% !important; height: 100% !important;
+  max-height: none; max-width: none; resize: none;
+}
+.titlebar {
+  display: flex; align-items: center; gap: 6px;
+  height: 22px; padding: 0 3px 0 4px;
+  background: linear-gradient(90deg, var(--title-off-a), var(--title-off-b));
+  color: #e9e9e9;
+  font: 700 11px/1 var(--font);
+  user-select: none; touch-action: none; cursor: grab;
+  flex: none;
+}
+.win.active .titlebar { background: linear-gradient(90deg, var(--title-a), var(--title-b)); color: #fff; }
+.titlebar svg { width: 16px; height: 16px; flex: none; }
+.titlebar h2 { all: unset; flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.wbtn {
+  width: 18px; height: 16px; padding: 0;
+  display: grid; place-items: center; flex: none;
+}
+.wbtn svg { width: 8px; height: 8px; }
+.wbtn + .wbtn { margin-left: -2px; }
+.wbtn.close { margin-left: 2px; }
+.win-body {
+  flex: 1; min-height: 0; overflow: auto;
+  margin-top: 4px;
+  background: #fff;
+}
+.win-body.plain { background: var(--face); }
+
+/* phones */
+@media (max-width: 700px) {
+  .win, .win.max {
+    left: 0 !important; top: 0 !important; width: 100% !important; height: 100% !important;
+    max-width: none; max-height: none; resize: none; min-width: 0;
+  }
+  .titlebar { height: 36px; cursor: default; }
+  .wbtn { width: 30px; height: 28px; }
+  .wbtn.maximize { display: none; }
+}

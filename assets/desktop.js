@@ -14,9 +14,13 @@
     contact: svg(`<rect x="3" y="8" width="26" height="18" fill="#0b0b0b"/><rect x="4" y="9" width="24" height="16" fill="#fff"/><rect x="5" y="10" width="2" height="2" fill="#0b0b0b"/><rect x="7" y="12" width="2" height="2" fill="#0b0b0b"/><rect x="9" y="14" width="2" height="2" fill="#0b0b0b"/><rect x="11" y="16" width="2" height="2" fill="#0b0b0b"/><rect x="13" y="17" width="6" height="2" fill="#0b0b0b"/><rect x="19" y="16" width="2" height="2" fill="#0b0b0b"/><rect x="21" y="14" width="2" height="2" fill="#0b0b0b"/><rect x="23" y="12" width="2" height="2" fill="#0b0b0b"/><rect x="25" y="10" width="2" height="2" fill="#0b0b0b"/><rect x="22" y="20" width="4" height="3" fill="#d43a2f"/>`),
     terminal: svg(`<rect x="3" y="5" width="26" height="22" fill="#0b0b0b"/><rect x="4" y="6" width="24" height="3" fill="#c3c3c3"/><rect x="4" y="9" width="24" height="17" fill="#111"/><rect x="7" y="12" width="2" height="2" fill="#3fc46b"/><rect x="9" y="14" width="2" height="2" fill="#3fc46b"/><rect x="7" y="16" width="2" height="2" fill="#3fc46b"/><rect x="13" y="17" width="7" height="2" fill="#3fc46b"/>`),
     manual: svg(`<rect x="5" y="3" width="22" height="26" fill="#0b0b0b"/><rect x="6" y="4" width="20" height="24" fill="#2a5fb4"/><rect x="6" y="4" width="3" height="24" fill="#183d7a"/><rect x="24" y="5" width="2" height="22" fill="#e8e8e8"/><rect x="12" y="8" width="10" height="7" fill="#f2c94c"/><rect x="13" y="9" width="8" height="5" fill="#fff3b0"/><rect x="15" y="10" width="2" height="1" fill="#0b0b0b"/><rect x="18" y="10" width="2" height="1" fill="#0b0b0b"/><rect x="12" y="19" width="10" height="2" fill="#c9d6ff"/><rect x="12" y="22" width="7" height="2" fill="#c9d6ff"/>`),
+    display: svg(`<rect x="3" y="4" width="26" height="19" fill="#0b0b0b"/><rect x="4" y="5" width="24" height="17" fill="#c3c3c3"/><rect x="6" y="7" width="20" height="13" fill="#2a7fd4"/><rect x="6" y="15" width="20" height="5" fill="#3a8a4a"/><rect x="20" y="9" width="3" height="3" fill="#ffd23f"/><rect x="13" y="23" width="6" height="3" fill="#0b0b0b"/><rect x="9" y="26" width="14" height="2" fill="#0b0b0b"/>`),
     hanoi: svg(`<rect x="2" y="25" width="28" height="4" fill="#0b0b0b"/><rect x="3" y="26" width="26" height="2" fill="#a0652b"/><rect x="7" y="7" width="2" height="18" fill="#5a3a1a"/><rect x="15" y="7" width="2" height="18" fill="#5a3a1a"/><rect x="23" y="7" width="2" height="18" fill="#5a3a1a"/><rect x="2" y="21" width="12" height="4" fill="#0b0b0b"/><rect x="3" y="22" width="10" height="2" fill="#d43a2f"/><rect x="3" y="17" width="10" height="4" fill="#0b0b0b"/><rect x="4" y="18" width="8" height="2" fill="#f2c94c"/><rect x="19" y="21" width="10" height="4" fill="#0b0b0b"/><rect x="20" y="22" width="8" height="2" fill="#3fc46b"/><rect x="5" y="13" width="6" height="4" fill="#0b0b0b"/><rect x="6" y="14" width="4" height="2" fill="#2a7fd4"/>`),
     wallpaper: svg(`<rect x="3" y="5" width="26" height="22" fill="#0b0b0b"/><rect x="4" y="6" width="24" height="20" fill="#2a3a7a"/><rect x="18" y="9" width="4" height="4" fill="#ffd23f"/><rect x="4" y="19" width="24" height="7" fill="#3a8a4a"/><rect x="8" y="15" width="8" height="4" fill="#3a8a4a"/>`),
     shutdown: svg(`<rect x="7" y="7" width="18" height="18" fill="#0b0b0b"/><rect x="8" y="8" width="16" height="16" fill="#d43a2f"/><rect x="15" y="10" width="2" height="7" fill="#fff"/><rect x="11" y="13" width="2" height="7" fill="#fff"/><rect x="19" y="13" width="2" height="7" fill="#fff"/><rect x="12" y="20" width="8" height="2" fill="#fff"/>`),
+    // desktop shortcuts to my profiles (the tray keeps the small monochrome versions above)
+    "web-github": svg(`<rect x="3" y="3" width="26" height="26" fill="#0b0b0b"/><rect x="4" y="4" width="24" height="24" fill="#24292f"/><g transform="translate(6 6) scale(1.25)"><path fill="#fff" d="M8 0a8 8 0 0 0-2.5 15.6c.4 0 .5-.2.5-.4v-1.5c-2.2.5-2.7-1-2.7-1-.4-.9-.9-1.2-.9-1.2-.7-.5.1-.5.1-.5.8.1 1.2.8 1.2.8.7 1.3 1.9.9 2.4.7 0-.5.3-.9.5-1.1-1.8-.2-3.6-.9-3.6-4 0-.9.3-1.6.8-2.1-.1-.2-.4-1 .1-2.1 0 0 .7-.2 2.2.8a7.5 7.5 0 0 1 4 0c1.5-1 2.2-.8 2.2-.8.4 1.1.2 1.9.1 2.1.5.6.8 1.3.8 2.1 0 3.1-1.9 3.8-3.6 4 .3.3.6.8.6 1.5v2.2c0 .2.1.5.6.4A8 8 0 0 0 8 0Z"/></g>`),
+    "web-linkedin": svg(`<rect x="3" y="3" width="26" height="26" fill="#0b0b0b"/><rect x="4" y="4" width="24" height="24" fill="#0a66c2"/><rect x="8" y="8" width="4" height="4" fill="#fff"/><rect x="8" y="14" width="4" height="10" fill="#fff"/><rect x="15" y="14" width="4" height="10" fill="#fff"/><rect x="17" y="14" width="6" height="3" fill="#fff"/><rect x="21" y="16" width="4" height="8" fill="#fff"/>`),
     github: `<svg viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 0a8 8 0 0 0-2.5 15.6c.4 0 .5-.2.5-.4v-1.5c-2.2.5-2.7-1-2.7-1-.4-.9-.9-1.2-.9-1.2-.7-.5.1-.5.1-.5.8.1 1.2.8 1.2.8.7 1.3 1.9.9 2.4.7 0-.5.3-.9.5-1.1-1.8-.2-3.6-.9-3.6-4 0-.9.3-1.6.8-2.1-.1-.2-.4-1 .1-2.1 0 0 .7-.2 2.2.8a7.5 7.5 0 0 1 4 0c1.5-1 2.2-.8 2.2-.8.4 1.1.2 1.9.1 2.1.5.6.8 1.3.8 2.1 0 3.1-1.9 3.8-3.6 4 .3.3.6.8.6 1.5v2.2c0 .2.1.5.6.4A8 8 0 0 0 8 0Z"/></svg>`,
     linkedin: `<svg viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M0 1.1C0 .5.5 0 1.2 0h13.6c.7 0 1.2.5 1.2 1.1v13.8c0 .6-.5 1.1-1.2 1.1H1.2C.5 16 0 15.5 0 14.9V1.1Zm4.9 12.3V6.2H2.5v7.2h2.4ZM3.7 5.2c.8 0 1.4-.6 1.4-1.3 0-.8-.5-1.3-1.3-1.3-.8 0-1.4.5-1.4 1.3 0 .7.5 1.3 1.3 1.3Zm4.9 8.2v-4c0-.2 0-.4.1-.6.2-.4.6-.9 1.3-.9.9 0 1.2.7 1.2 1.7v3.8h2.4V9.3c0-2.2-1.2-3.2-2.7-3.2-1.3 0-1.8.7-2.2 1.2v-1H6.2v7.1h2.4Z"/></svg>`,
   };
@@ -27,11 +31,14 @@
   };
 
   /* ---------- photos app ---------- */
-  const PHOTOS = Array.from({ length: 33 }, (_, i) => "photo_" + String(i + 1).padStart(2, "0"));
+  const REMOVED_PHOTOS = new Set(["photo_05", "photo_08", "photo_12"]); // taken off the site
+  const PHOTOS = Array.from({ length: 55 }, (_, i) => "photo_" + String(i + 1).padStart(2, "0"))
+    .filter((p) => !REMOVED_PHOTOS.has(p));
   const SLIDE_MS = 4000;
+  let photoInfo = null; // camera details per photo, loaded when the Info panel first opens
   // width / height of each photo, so the gallery can lay out justified rows without cropping
-  const PORTRAIT = new Set([3, 9, 16, 30, 32]);
-  const ratio = (i) => (PORTRAIT.has(i + 1) ? 2 / 3 : 3 / 2);
+  const PORTRAIT = new Set(["photo_03", "photo_09", "photo_16", "photo_30", "photo_32", "photo_35", "photo_39"]);
+  const ratio = (i) => (PORTRAIT.has(PHOTOS[i]) ? 2 / 3 : 3 / 2);
 
   function photosBody() {
     const frames = PHOTOS.map((p, i) => `
@@ -61,10 +68,18 @@
           <span class="ph-sep" aria-hidden="true"></span>
           <button class="bevel" data-act="play" aria-pressed="false"><b aria-hidden="true">▶</b> <span>Slideshow</span></button>
           <a class="bevel ph-full" data-act="full" target="_blank" rel="noopener">Full size</a>
+          <button class="bevel ph-info-btn" data-act="info" aria-pressed="false" aria-controls="ph-info" title="Camera details (I)">
+            <b aria-hidden="true">i</b> <span>Info</span></button>
           <span class="ph-count bevel-in" aria-live="polite"></span>
         </div>
-        <div class="ph-stage" tabindex="0" aria-label="Photo viewer. Use the arrow keys to move between photos.">
-          <img class="ph-img" alt="">
+        <div class="ph-main">
+          <div class="ph-stage" tabindex="0" aria-label="Photo viewer. Use the arrow keys to move between photos.">
+            <img class="ph-img" alt="">
+          </div>
+          <aside class="ph-info" id="ph-info" aria-label="Photo details" hidden>
+            <div class="ph-info-title">Properties</div>
+            <dl class="ph-info-list"></dl>
+          </aside>
         </div>
         <div class="film" aria-label="Film strip">
           <div class="film-track">
@@ -84,8 +99,34 @@
     const count = $(".ph-count", win);
     const full = $(".ph-full", win);
     const playBtn = $('[data-act="play"]', win);
+    const infoBtn = $('[data-act="info"]', win);
+    const infoBox = $(".ph-info", win);
+    const infoList = $(".ph-info-list", win);
     let cur = -1;
     let timer = null;
+
+    // Info panel: camera settings from assets/photos.json (built by dev/build_photo_info.py)
+    const INFO_ROWS = [["camera", "Camera"], ["lens", "Lens"], ["film", "Film"], ["focal", "Focal length"],
+      ["aperture", "Aperture"], ["shutter", "Shutter"], ["iso", "ISO"], ["date", "Taken"]];
+    function renderInfo() {
+      if (infoBox.hidden || cur < 0) return;
+      const meta = photoInfo && photoInfo[PHOTOS[cur]];
+      const rows = [["File", `${PHOTOS[cur]}.jpg`]];
+      if (meta) INFO_ROWS.forEach(([k, label]) => { if (meta[k]) rows.push([label, meta[k]]); });
+      infoList.innerHTML = rows.map(([k, v]) => `<dt>${esc(k)}</dt><dd>${esc(v)}</dd>`).join("") +
+        (photoInfo && !meta ? `<dd class="ph-info-none">No camera data for this photo.</dd>` : "") +
+        (!photoInfo ? `<dd class="ph-info-none">Loading…</dd>` : "");
+    }
+    function setInfo(on) {
+      infoBox.hidden = !on;
+      infoBtn.setAttribute("aria-pressed", on ? "true" : "false");
+      store.set("photoInfo", on ? "1" : "0");
+      if (on && !photoInfo) {
+        fetch("assets/photos.json?v=1").then((r) => r.json()).catch(() => ({}))
+          .then((d) => { photoInfo = d; renderInfo(); });
+      }
+      renderInfo();
+    }
 
     function show(i, { scroll = true } = {}) {
       i = (i + PHOTOS.length) % PHOTOS.length;
@@ -103,6 +144,7 @@
       next.src = `photos/${name}.jpg`;
       full.href = `photos/${name}.jpg`;
       count.textContent = `${i + 1} of ${PHOTOS.length}`;
+      renderInfo();
       frames.forEach((f, k) => f.setAttribute("aria-current", k === i ? "true" : "false"));
       if (scroll) {
         const f = frames[i];
@@ -150,6 +192,7 @@
       if (act === "prev") { play(false); step(-1); }
       if (act === "next") { play(false); step(1); }
       if (act === "play") play(!timer);
+      if (act === "info") setInfo(infoBox.hidden);
     });
 
     // arrow keys while the Photos window is the active one
@@ -159,6 +202,7 @@
       if (e.key === "ArrowRight") { e.preventDefault(); play(false); step(1); }
       if (e.key === "ArrowLeft") { e.preventDefault(); play(false); step(-1); }
       if (e.key === " " && document.activeElement === stage) { e.preventDefault(); play(!timer); }
+      if ((e.key === "i" || e.key === "I") && !e.ctrlKey && !e.metaKey && !e.altKey) setInfo(infoBox.hidden);
     };
     document.addEventListener("keydown", onKey);
 
@@ -178,6 +222,7 @@
     }, { passive: false });
 
     show(0, { scroll: false });
+    if (store.get("photoInfo") === "1") setInfo(true);
   }
 
   /* ---------- terminal app: the real MOOP compiler ---------- */
@@ -1112,7 +1157,7 @@ Edits last until you reload the page.
       const doc = frame.contentDocument;
       doc.open();
       doc.write(`<!doctype html><html><head><title>Maxwell Anavian Resume</title>
-        <link rel="stylesheet" href="${new URL("assets/desktop.css", location.href)}">
+        ${[...document.querySelectorAll('link[rel="stylesheet"]')].map((l) => `<link rel="stylesheet" href="${l.href}">`).join("")}
         <style>@page { size: letter; margin: 0.5in } html, body { background: #fff; margin: 0; overflow: visible; height: auto }
         .rs-page { box-shadow: none !important; width: auto !important; min-height: 0 !important; padding: 0 !important; zoom: 1 !important }</style>
         </head><body><article class="rs-page">${page.innerHTML}</article></body></html>`);
@@ -1167,6 +1212,7 @@ Edits last until you reload the page.
     terminal: { title: "Terminal - MOOP", w: 960, h: 620, plain: true, body: termBody, init: termInit },
     hanoi:    { title: "Tower of Hanoi", w: 640, h: 500, plain: true, body: hanoiBody, init: hanoiInit },
     manual:   { title: "MOOP Language Manual", w: 720, h: 620, plain: true, body: manualBody, init: manualInit },
+    display:  { title: "Display Properties", w: 400, h: "auto", plain: true, body: displayBody, init: displayInit },
   };
   // one details window per project, each with its own colored folder icon
   for (const p of PROJECTS) {
@@ -1180,10 +1226,18 @@ Edits last until you reload the page.
     };
     ICONS[projectApp(p)] = folderIcon(p.color);
   }
-  const DESKTOP_ORDER = ["about", "projects", "photos", "resume", "contact", "terminal", "hanoi"];
-  const LABEL = { about: "About me", projects: "Projects", photos: "Photos", resume: "Resume", contact: "Contact", terminal: "Terminal", hanoi: "Hanoi" };
+  const DESKTOP_ORDER = ["about", "projects", "photos", "resume", "contact", "terminal", "hanoi", "web-github", "web-linkedin"];
+  // desktop shortcuts that open a website in a new tab instead of a window
+  const LINKS = {
+    "web-github": "https://github.com/anavianm",
+    "web-linkedin": "https://www.linkedin.com/in/maxwell-anavian/",
+  };
+  const LABEL = { about: "About me", projects: "Projects", photos: "Photos", resume: "Resume", contact: "Contact", terminal: "Terminal", hanoi: "Hanoi", "web-github": "GitHub", "web-linkedin": "LinkedIn" };
 
-  const WALLPAPERS = ["photo_01", "photo_25", "photo_17", "photo_20", "photo_10", "photo_13", "photo_28"];
+  // landscape photos offered as wallpapers (photo_29 is black-and-white: skins keep their own colors)
+  const WALLPAPERS = ["photo_01", "photo_25", "photo_17", "photo_20", "photo_10", "photo_13",
+    "photo_28", "photo_11", "photo_18", "photo_14", "photo_29", "photo_34", "photo_36", "photo_37", "photo_38",
+    "photo_41", "photo_42", "photo_43", "photo_46", "photo_47", "photo_50", "photo_52"];
 
   /* ---------- helpers ---------- */
   const $ = (s, el = document) => el.querySelector(s);
@@ -1228,6 +1282,7 @@ Edits last until you reload the page.
   let cascade = 0;
 
   function open(id) {
+    if (LINKS[id]) { closeStart(); window.open(LINKS[id], "_blank", "noopener"); return; }
     const app = APPS[id];
     if (!app) return;
     closeStart();
@@ -1395,7 +1450,7 @@ Edits last until you reload the page.
   /* ---------- start menu ---------- */
   const startItems = [
     ["welcome", "Welcome"], ...DESKTOP_ORDER.map((id) => [id, LABEL[id]]), ["manual", "MOOP manual"],
-    ["sep"], ["wallpaper", "Change wallpaper"], ["shutdown", "Shut down…"],
+    ["sep"], ["display", "Display settings"], ["shutdown", "Shut down…"],
   ];
   $("#startList").innerHTML = startItems.map(([id, label]) =>
     id === "sep" ? `<li class="sep" role="separator"></li>`
@@ -1420,8 +1475,7 @@ Edits last until you reload the page.
     if (!item) return;
     const id = item.dataset.item;
     closeStart();
-    if (id === "wallpaper") nextWallpaper();
-    else if (id === "shutdown") shutdown();
+    if (id === "shutdown") shutdown();
     else open(id);
   });
   startMenu.addEventListener("keydown", (e) => {
@@ -1443,17 +1497,156 @@ Edits last until you reload the page.
     if (top) close(top);
   });
 
-  /* ---------- wallpaper ---------- */
+  /* ---------- wallpaper, skins and wallpaper-matched colors ---------- */
+  const SKINS = { win98: "Windows 98", xp: "Windows XP", vista: "Windows Vista", win7: "Windows 7", win10: "Windows 10" };
+  const SKIN_VERSION = 2; // bump after editing a file in assets/css/skins/
+  const root = document.documentElement;
+  const matchColors = () => store.get("matchColors") !== "0"; // on unless turned off
+
+  function setSkin(name) {
+    if (!SKINS[name]) name = "win98";
+    $("#skin").href = `assets/css/skins/${name}.css?v=${SKIN_VERSION}`;
+    root.dataset.skin = name;
+    store.set("skin", name);
+  }
+
+  // Dominant color of the wallpaper: bucket pixels by hue, weighting colorful, mid-bright ones,
+  // and keep the heaviest bucket. Returns null for black-and-white or very muted photos.
+  async function wallpaperHue(src) {
+    const img = new Image();
+    img.src = src;
+    await img.decode();
+    const N = 48;
+    const c = document.createElement("canvas");
+    c.width = c.height = N;
+    const g = c.getContext("2d", { willReadFrequently: true });
+    g.drawImage(img, 0, 0, N, N);
+    const px = g.getImageData(0, 0, N, N).data;
+    const buckets = Array.from({ length: 24 }, () => ({ w: 0, x: 0, y: 0, s: 0 }));
+    let total = 0;
+    for (let i = 0; i < px.length; i += 4) {
+      const r = px[i] / 255, gr = px[i + 1] / 255, b = px[i + 2] / 255;
+      const max = Math.max(r, gr, b), min = Math.min(r, gr, b), l = (max + min) / 2, d = max - min;
+      if (!d) continue;
+      const s = d / (1 - Math.abs(2 * l - 1));
+      if (s < 0.25 || l < 0.1 || l > 0.9) continue;
+      let h = max === r ? ((gr - b) / d) % 6 : max === gr ? (b - r) / d + 2 : (r - gr) / d + 4;
+      h = (h * 60 + 360) % 360;
+      const w = s * (1 - Math.abs(l - 0.5) * 2);
+      const k = buckets[Math.floor(h / 15) % 24];
+      k.w += w; k.s += s * w;
+      k.x += Math.cos(h * Math.PI / 180) * w; k.y += Math.sin(h * Math.PI / 180) * w; // circular mean
+      total += w;
+    }
+    const best = buckets.reduce((a, b) => (b.w > a.w ? b : a));
+    if (best.w < N * N * 0.02) return null;
+    return {
+      h: Math.round((Math.atan2(best.y, best.x) * 180 / Math.PI + 360) % 360),
+      s: Math.round(Math.min(0.85, Math.max(0.45, best.s / best.w)) * 100),
+    };
+  }
+
+  let accentJob = 0;
+  async function updateAccent() {
+    const job = ++accentJob;
+    const clear = () => ["--accent", "--accent-dark", "--accent-light", "--accent-ink"].forEach((v) => root.style.removeProperty(v));
+    if (!matchColors()) { clear(); return; }
+    let hue = null;
+    try { hue = await wallpaperHue(`photos/${currentWallpaper()}.jpg`); } catch { /* keep skin colors */ }
+    if (job !== accentJob) return; // a newer wallpaper won the race
+    if (!hue) { clear(); return; }
+    root.style.setProperty("--accent", `hsl(${hue.h} ${hue.s}% 42%)`);
+    root.style.setProperty("--accent-dark", `hsl(${hue.h} ${hue.s}% 26%)`);
+    root.style.setProperty("--accent-light", `hsl(${hue.h} ${Math.round(hue.s * 0.85)}% 58%)`);
+    root.style.setProperty("--accent-ink", "#fff");
+    document.dispatchEvent(new Event("accentchange"));
+  }
+
+  const currentWallpaper = () => {
+    const w = store.get("wallpaper");
+    return WALLPAPERS.includes(w) ? w : WALLPAPERS[0];
+  };
   function setWallpaper(name) {
     document.body.style.backgroundImage = `url("photos/${name}.jpg")`;
     store.set("wallpaper", name);
+    updateAccent();
   }
   function nextWallpaper() {
-    const cur = store.get("wallpaper") || WALLPAPERS[0];
-    setWallpaper(WALLPAPERS[(WALLPAPERS.indexOf(cur) + 1) % WALLPAPERS.length]);
+    setWallpaper(WALLPAPERS[(WALLPAPERS.indexOf(currentWallpaper()) + 1) % WALLPAPERS.length]);
   }
-  const savedWp = store.get("wallpaper");
-  if (savedWp && WALLPAPERS.includes(savedWp)) setWallpaper(savedWp);
+  setSkin(store.get("skin") || "win98");
+  setWallpaper(currentWallpaper());
+
+  // right-clicking the empty desktop opens Display Properties, as on Windows
+  desktop.addEventListener("contextmenu", (e) => {
+    if (e.target.closest(".win, .icon")) return;
+    e.preventDefault();
+    open("display");
+  });
+
+  /* ---------- Display Properties ---------- */
+  function displayBody() {
+    return `
+      <div class="display">
+        <div class="dp-monitor" aria-hidden="true">
+          <div class="dp-screen">
+            <div class="dp-mini win bevel active">
+              <header class="titlebar"><h2>Active Window</h2>
+                <span class="wbtn bevel minimize">${winGlyph.min}</span><span class="wbtn bevel maximize">${winGlyph.max}</span><span class="wbtn bevel close">${winGlyph.close}</span>
+              </header>
+              <div class="win-body"><span class="dp-sel">Selected</span> text</div>
+            </div>
+            <div class="dp-bar"></div>
+          </div>
+          <div class="dp-stand"></div>
+        </div>
+        <div class="tabs" role="tablist">
+          <button class="tab" role="tab" data-dp-tab="background" aria-selected="true">Background</button>
+          <button class="tab" role="tab" data-dp-tab="appearance" aria-selected="false">Appearance</button>
+        </div>
+        <div class="tab-body">
+          <div class="dp-panel" data-dp-panel="background" role="tabpanel">
+            <p class="dp-label">Wallpaper:</p>
+            <div class="dp-walls" role="radiogroup" aria-label="Wallpaper">
+              ${WALLPAPERS.map((w) => `<button class="dp-wall" role="radio" data-wall="${w}" aria-label="Wallpaper ${w.replace("photo_", "")}"><img src="photos/thumbs/${w}.jpg" alt="" loading="lazy"></button>`).join("")}
+            </div>
+          </div>
+          <div class="dp-panel" data-dp-panel="appearance" role="tabpanel" hidden>
+            <fieldset class="dp-skins">
+              <legend>Window style</legend>
+              ${Object.entries(SKINS).map(([k, label]) => `<label class="dp-radio"><input type="radio" name="dp-skin" value="${k}"> ${label}</label>`).join("")}
+            </fieldset>
+            <label class="dp-check"><input type="checkbox" class="dp-match"> Match window colors to the wallpaper</label>
+            <div class="dp-swatches" aria-hidden="true"><span style="background:var(--title-a)"></span><span style="background:var(--title-b)"></span><span style="background:var(--select)"></span></div>
+          </div>
+        </div>
+        <div class="dp-actions"><button class="bevel dp-ok" data-close>OK</button></div>
+      </div>`;
+  }
+
+  function displayInit(win) {
+    const refresh = () => {
+      const wall = currentWallpaper();
+      $(".dp-screen", win).style.backgroundImage = `url("photos/thumbs/${wall}.jpg")`;
+      win.querySelectorAll(".dp-wall").forEach((b) => b.setAttribute("aria-checked", b.dataset.wall === wall ? "true" : "false"));
+      win.querySelectorAll('input[name="dp-skin"]').forEach((r) => { r.checked = r.value === root.dataset.skin; });
+      $(".dp-match", win).checked = matchColors();
+    };
+    win.addEventListener("click", (e) => {
+      const tab = e.target.closest("[data-dp-tab]");
+      if (tab) {
+        win.querySelectorAll("[data-dp-tab]").forEach((t) => t.setAttribute("aria-selected", t === tab ? "true" : "false"));
+        win.querySelectorAll("[data-dp-panel]").forEach((p) => { p.hidden = p.dataset.dpPanel !== tab.dataset.dpTab; });
+      }
+      const wall = e.target.closest(".dp-wall");
+      if (wall) { setWallpaper(wall.dataset.wall); refresh(); }
+    });
+    win.addEventListener("change", (e) => {
+      if (e.target.name === "dp-skin") setSkin(e.target.value);
+      if (e.target.classList.contains("dp-match")) { store.set("matchColors", e.target.checked ? "1" : "0"); updateAccent(); }
+    });
+    refresh();
+  }
 
   /* ---------- shutdown ---------- */
   const shut = $("#shutdown");
