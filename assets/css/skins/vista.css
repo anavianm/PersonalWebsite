@@ -1,0 +1,122 @@
+/* Windows Vista (Aero) skin. Loaded instead of win98.css.
+ * Frames are tinted glass: --acc is the wallpaper accent, else Aero's default blue. */
+:root {
+  --acc: var(--accent, #4b88c9);
+  --glass: color-mix(in srgb, var(--acc) 45%, transparent);
+  --face: #f0f0f0;
+  --hi: #ffffff;
+  --lo: #a0a0a0;
+  --dk: #404040;
+  --title-a: color-mix(in srgb, var(--acc) 85%, #000);
+  --title-b: var(--acc);
+  --select: color-mix(in srgb, var(--acc) 75%, #000);
+  --ink: #000;
+  --taskbar-h: 40px;
+  --font: "Segoe UI", Tahoma, Verdana, sans-serif;
+}
+body { font-size: 12px; -webkit-font-smoothing: auto; font-smooth: auto; }
+
+/* controls: glossy two-tone buttons that glow blue on hover */
+.bevel {
+  background: linear-gradient(180deg, #f2f2f2 0 50%, #e3e3e3 50%, #d6d6d6);
+  border: 1px solid #707070; border-radius: 3px; box-shadow: inset 0 0 0 1px rgba(255,255,255,.7);
+}
+button.bevel { cursor: pointer; }
+button.bevel:hover, a.bevel:hover {
+  background: linear-gradient(180deg, #eaf6fd 0 50%, #bee6fd 50%, #a7d9f5); border-color: #3c7fb1;
+}
+button.bevel:active, button.bevel[aria-pressed="true"], button.bevel[aria-expanded="true"] {
+  background: linear-gradient(180deg, #e5f4fc 0 50%, #c4e5f6 50%, #98d1ef); border-color: #2c628b;
+  box-shadow: inset 1px 1px 2px rgba(0,0,0,.25);
+}
+.bevel-in { box-shadow: inset 0 0 0 1px #abadb3; }
+:focus-visible { outline: 1px dotted #000; outline-offset: -3px; }
+
+/* windows: blurred, tinted glass frame with a soft drop shadow */
+.win.bevel {
+  padding: 0 7px 7px; border: 1px solid rgba(0,0,0,.65); border-radius: 7px 7px 4px 4px;
+  background: linear-gradient(180deg, rgba(255,255,255,.45), rgba(255,255,255,.05) 40px), var(--glass);
+  -webkit-backdrop-filter: blur(10px) saturate(160%); backdrop-filter: blur(10px) saturate(160%);
+  box-shadow: 0 8px 26px rgba(0,0,0,.5), inset 0 0 0 1px rgba(255,255,255,.55);
+}
+.win:not(.active).bevel { background: rgba(220,226,235,.55); box-shadow: 0 4px 14px rgba(0,0,0,.35), inset 0 0 0 1px rgba(255,255,255,.5); }
+.titlebar, .win.active .titlebar {
+  height: 30px; padding: 0 0 0 4px; background: none;
+  color: #000; font: 400 13px/1 "Segoe UI", Tahoma, sans-serif;
+  text-shadow: 0 0 8px #fff, 0 0 4px #fff, 0 0 2px #fff;
+}
+.win:not(.active) .titlebar { color: #555; }
+.titlebar > svg { display: none; }
+.titlebar h2 { padding-left: 4px; }
+/* caption buttons sit flush with the top edge, close is the wide red one */
+.wbtn.bevel {
+  align-self: flex-start; width: 26px; height: 18px; margin: -1px 0 0; border-radius: 0;
+  border: 1px solid rgba(0,0,0,.55); border-top: 0; fill: #fff;
+  background: linear-gradient(180deg, rgba(255,255,255,.55) 0 45%, rgba(255,255,255,.15) 50%, rgba(255,255,255,.3));
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.5);
+}
+.wbtn.minimize.bevel { border-radius: 0 0 0 4px; }
+.wbtn + .wbtn { margin-left: -1px; }
+.wbtn.close.bevel { width: 43px; margin-left: -1px; border-radius: 0 0 4px 0;
+  background: linear-gradient(180deg, #e8a397 0 45%, #d6553d 50%, #c7432b); }
+.wbtn.bevel:hover { filter: brightness(1.2); }
+.wbtn svg { width: 9px; height: 9px; filter: drop-shadow(0 0 1px rgba(0,0,0,.8)); }
+.win-body { margin-top: 0; border: 1px solid rgba(0,0,0,.55); box-shadow: 0 0 0 1px rgba(255,255,255,.5); }
+
+/* tabs */
+.tab { background: linear-gradient(180deg, #f6f6f6, #e2e2e2); border: 1px solid #898c95; border-bottom: 0; border-radius: 3px 3px 0 0; box-shadow: none; margin-right: 1px; }
+.tab[aria-selected="true"] { background: #fff; }
+.tab-body { background: #fff; box-shadow: inset 0 0 0 1px #898c95; }
+
+/* taskbar: black glass, round start orb, glassy task buttons */
+.taskbar {
+  padding: 0 6px 0 2px; gap: 6px; box-shadow: inset 0 1px rgba(255,255,255,.35);
+  background: linear-gradient(180deg, rgba(90,90,90,.75), rgba(10,10,10,.92) 50%, rgba(0,0,0,.95)),
+              color-mix(in srgb, var(--acc) 25%, transparent);
+  -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
+}
+.start.bevel {
+  width: 46px; height: 46px; margin-top: -8px; padding: 0; border-radius: 50%; border: 1px solid rgba(0,0,0,.8);
+  justify-content: center; font-size: 0;
+  background: radial-gradient(circle at 50% 30%, #fff 0 8%, color-mix(in srgb, var(--acc) 60%, #9ed3ff) 30%, color-mix(in srgb, var(--acc) 70%, #06224a) 75%, #021025);
+  box-shadow: 0 0 6px rgba(0,0,0,.6), inset 0 0 0 2px rgba(255,255,255,.35);
+}
+.start.bevel:hover, .start.bevel[aria-expanded="true"] { filter: brightness(1.25); }
+.start.bevel { gap: 0; } /* the "Start" text is hidden; its gap would push the flag off-center */
+.start-logo {
+  width: 15px; height: 15px; border-radius: 2px 5px 2px 5px;
+  background: linear-gradient(#f25022,#f25022) 0 0 / 7px 7px no-repeat, linear-gradient(#7fba00,#7fba00) 8px 0 / 7px 7px no-repeat, linear-gradient(#00a4ef,#00a4ef) 0 8px / 7px 7px no-repeat, linear-gradient(#ffb900,#ffb900) 8px 8px / 7px 7px no-repeat;
+  transform: perspective(30px) rotateY(-12deg) skewY(-6deg);
+  filter: drop-shadow(0 0 2px rgba(255,255,255,.9)) drop-shadow(0 0 4px rgba(255,255,255,.5));
+}
+.task.bevel {
+  height: 32px; color: #fff; border: 1px solid rgba(0,0,0,.7); border-radius: 3px;
+  background: linear-gradient(180deg, rgba(255,255,255,.22), rgba(255,255,255,.06) 50%, rgba(255,255,255,0));
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.18);
+}
+.task.bevel:hover { background: linear-gradient(180deg, rgba(255,255,255,.35), rgba(255,255,255,.12)); }
+.task.bevel[aria-pressed="true"] {
+  font-weight: 400; border-color: rgba(0,0,0,.8);
+  background: linear-gradient(180deg, color-mix(in srgb, var(--acc) 60%, rgba(255,255,255,.4)), color-mix(in srgb, var(--acc) 50%, rgba(0,0,0,.4)));
+}
+.tray.bevel-in { height: 100%; color: #fff; box-shadow: none; background: none; }
+.tray-icon { color: #fff; }
+
+/* start menu: glass frame around a white list */
+.start-menu.bevel {
+  bottom: calc(var(--taskbar-h) + 2px); padding: 8px; border: 1px solid rgba(0,0,0,.7); border-radius: 6px;
+  background: linear-gradient(180deg, rgba(255,255,255,.35), rgba(255,255,255,0) 60px), var(--glass);
+  -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); box-shadow: 0 8px 26px rgba(0,0,0,.5);
+}
+.start-menu ul { background: #fff; border: 1px solid rgba(0,0,0,.45); border-radius: 3px; }
+.start-menu .mi { font-size: 12px; border-radius: 3px; }
+
+.icon { font: 400 12px/1.3 "Segoe UI", Tahoma, sans-serif; }
+
+@media (max-width: 700px) {
+  .titlebar, .win.active .titlebar { height: 36px; }
+  .wbtn.bevel { height: 26px; width: 34px; }
+  .wbtn.close.bevel { width: 48px; }
+  .start.bevel { width: 48px; height: 48px; margin-top: -4px; }
+  .task.bevel { height: 40px; }
+}

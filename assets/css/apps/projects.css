@@ -1,0 +1,112 @@
+/* ---------- projects: Explorer folder + project details ---------- */
+.explorer { display: flex; flex-direction: column; height: 100%; background: var(--face); }
+.ex-address { display: flex; align-items: center; gap: 6px; padding: 4px 4px 6px; flex: none; }
+.ex-label { color: #444; }
+.ex-path {
+  flex: 1; min-width: 0; display: flex; align-items: center; gap: 6px;
+  height: 22px; padding: 0 6px; background: #fff; overflow: hidden; white-space: nowrap;
+}
+.ex-path svg { width: 16px; height: 16px; flex: none; }
+.ex-grid {
+  flex: 1; min-height: 0; overflow: auto; list-style: none; margin: 0 4px; padding: 12px 8px;
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(92px, 1fr)); align-content: start; gap: 14px 6px;
+  background: #fff;
+  box-shadow: inset -1px -1px var(--hi), inset 1px 1px var(--lo), inset -2px -2px #e4e4e4, inset 2px 2px var(--dk);
+}
+.ex-item {
+  width: 100%; display: flex; flex-direction: column; align-items: center; gap: 4px;
+  padding: 4px 2px; border: 0; background: none; cursor: pointer; color: var(--ink);
+  font: 400 11px/1.25 var(--font); text-align: center;
+}
+.ex-item svg { width: 48px; height: 48px; }
+.ex-item span { padding: 1px 3px; word-break: break-word; }
+.ex-item[aria-selected="true"] span { background: var(--select); color: #fff; }
+.ex-item[aria-selected="true"] svg { filter: brightness(.8) sepia(.3) hue-rotate(190deg); }
+.ex-item:focus-visible { outline: none; }
+.ex-item:focus-visible span { outline: 1px dotted var(--dk); outline-offset: 1px; }
+.ex-status { display: flex; gap: 3px; padding: 4px 4px 3px; flex: none; }
+.ex-status > span { padding: 3px 6px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.ex-count { flex: 0 0 auto; min-width: 120px; }
+.ex-hint { flex: 1; }
+
+/* Explorer view switcher: Large Icons / Details */
+.ex-toolbar { display: flex; gap: 4px; padding: 4px 4px 0; flex: none; }
+.ex-view {
+  height: 24px; padding: 0 10px 0 6px; display: inline-flex; align-items: center; gap: 5px;
+  font: 400 11px/1 var(--font); color: var(--ink);
+}
+.ex-view svg { width: 16px; height: 16px; }
+.ex-pane {
+  flex: 1; min-height: 0; margin: 0 4px; display: flex; flex-direction: column; overflow: hidden; background: #fff;
+  box-shadow: inset -1px -1px var(--hi), inset 1px 1px var(--lo), inset -2px -2px #e4e4e4, inset 2px 2px var(--dk);
+}
+.ex-pane .ex-grid { margin: 0 2px 2px; box-shadow: none; }
+.ex-head { display: none; }
+.ex-kind, .ex-tech, .ex-year { display: none; }
+
+.explorer[data-view="details"] .ex-head,
+.explorer[data-view="details"] .ex-item {
+  display: grid; grid-template-columns: minmax(110px, 1fr) minmax(90px, 1.45fr) minmax(90px, 1.45fr) 52px;
+}
+.explorer[data-view="details"] .ex-head { flex: none; margin: 2px 2px 0; }
+.ex-col {
+  height: 22px; padding: 0 6px; display: flex; align-items: center; justify-content: space-between;
+  font: 400 11px/1 var(--font); color: var(--ink); text-align: left; min-width: 0;
+}
+.ex-col i { font-style: normal; font-size: 8px; }
+.ex-col[data-dir="asc"] i::after { content: "▲"; }
+.ex-col[data-dir="desc"] i::after { content: "▼"; }
+.explorer[data-view="details"] .ex-grid { display: block; padding: 2px 0; }
+.explorer[data-view="details"] .ex-item, .explorer[data-view="details"] .ex-col { font-size: 13px; }
+.explorer[data-view="details"] .ex-item {
+  align-items: center; gap: 0; padding: 0; text-align: left; height: 22px;
+}
+.explorer[data-view="details"] .ex-item svg {
+  position: absolute; width: 16px; height: 16px; margin-left: 4px;
+}
+.explorer[data-view="details"] .ex-item { position: relative; }
+.explorer[data-view="details"] .ex-item > span {
+  display: block; padding: 2px 6px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.explorer[data-view="details"] .ex-name { padding-left: 24px !important; justify-self: start; max-width: 100%; }
+.explorer[data-view="details"] .ex-item[aria-selected="true"] .ex-name { background: var(--select); color: #fff; }
+.explorer[data-view="details"] .ex-item[aria-selected="true"] span:not(.ex-name) { background: none; color: var(--ink); }
+
+.project { display: grid; grid-template-columns: 170px 1fr; gap: 14px; padding: 14px; }
+.pj-art { align-self: start; padding: 3px; background: #fff; }
+.pj-art img { display: block; width: 100%; height: auto; }
+.pj-term {
+  aspect-ratio: 17 / 22; overflow: hidden; padding: 8px; background: #0c0c0c; color: #d6d6d6;
+  font: 10px/1.45 Consolas, "Cascadia Mono", "Courier New", monospace; white-space: nowrap;
+}
+.pj-cursor { color: #3fc46b; animation: twinkle 1s steps(2) infinite; }
+.pj-info { display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.pj-title { margin: 0; display: flex; align-items: center; gap: 8px; font: 700 22px/1.1 var(--font); color: var(--title-a); }
+.pj-title svg { width: 32px; height: 32px; flex: none; }
+.pj-meta {
+  display: grid; grid-template-columns: max-content 1fr; gap: 3px 12px; margin: 0;
+  padding: 8px 10px; background: #fff;
+  box-shadow: inset -1px -1px var(--hi), inset 1px 1px var(--lo);
+}
+.pj-meta dt { color: #555; }
+.pj-meta dd { margin: 0; }
+.pj-desc { margin: 0; font-size: 13px; line-height: 1.5; }
+.pj-soon { color: #666; font-style: italic; }
+.pj-links { display: flex; flex-wrap: wrap; gap: 6px; }
+.pj-btn {
+  display: inline-flex; align-items: center; justify-content: center; min-width: 75px; height: 24px; padding: 0 12px;
+  font: 400 11px/1 var(--font); color: var(--ink); text-decoration: none;
+}
+.pj-close { margin-top: auto; display: flex; justify-content: flex-end; padding-top: 4px; }
+
+/* phones */
+@media (max-width: 700px) {
+  .project { grid-template-columns: 1fr; }
+  .pj-art { max-width: 220px; justify-self: center; }
+  .pj-btn { height: 34px; }
+  .ex-grid { grid-template-columns: repeat(3, 1fr); }
+  .ex-count { display: none; }
+  .explorer[data-view="details"] .ex-head, .explorer[data-view="details"] .ex-item { grid-template-columns: minmax(110px, 1.2fr) minmax(80px, 1fr) 44px; }
+  .explorer[data-view="details"] .ex-tech, .explorer[data-view="details"] [data-sort="tech"] { display: none !important; }
+  .explorer[data-view="details"] .ex-item { height: 32px; }
+}

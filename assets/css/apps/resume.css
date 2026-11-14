@@ -1,0 +1,73 @@
+/* ---------- resume: Word 97-style window ---------- */
+.rs-word { display: flex; flex-direction: column; height: 100%; }
+.rs-menu { display: flex; gap: 2px; padding: 3px 4px 2px; flex: none; }
+.rs-menu span { padding: 2px 6px; }
+.rs-bars { flex: none; border-top: 1px solid var(--lo); border-bottom: 1px solid var(--hi); }
+.rs-bar {
+  display: flex; align-items: center; gap: 1px; padding: 2px 4px; flex-wrap: wrap;
+  border-top: 1px solid var(--hi); border-bottom: 1px solid var(--lo);
+}
+.rs-tb {
+  width: 23px; height: 22px; display: inline-grid; place-items: center; flex: none;
+  border: 0; padding: 0; background: none; color: var(--ink);
+}
+.rs-tb svg { width: 16px; height: 16px; }
+button.rs-tb { cursor: pointer; }
+button.rs-tb:hover { box-shadow: inset -1px -1px var(--lo), inset 1px 1px var(--hi); }
+button.rs-tb:active { box-shadow: inset 1px 1px var(--lo), inset -1px -1px var(--hi); }
+.rs-fmt { font: 700 13px/1 "Times New Roman", Times, serif; }
+.rs-fmt.i { font-style: italic; }
+.rs-fmt.u { text-decoration: underline; }
+.rs-fmt.al { text-align: left; } .rs-fmt.ar { text-align: right; }
+.rs-sep { width: 2px; height: 20px; margin: 0 4px; border-left: 1px solid var(--lo); border-right: 1px solid var(--hi); flex: none; }
+.rs-box {
+  height: 20px; margin-right: 3px; padding: 0 4px; display: inline-flex; align-items: center; background: #fff;
+  box-shadow: inset -1px -1px var(--hi), inset 1px 1px var(--lo), inset -2px -2px #e4e4e4, inset 2px 2px var(--dk);
+  white-space: nowrap; overflow: hidden;
+}
+.rs-zoom-label { display: inline-flex; align-items: center; gap: 4px; margin-left: 2px; }
+.rs-zoom {
+  height: 20px; font: 400 11px/1 var(--font); background: #fff; border: 0; padding: 0 2px;
+  box-shadow: inset -1px -1px var(--hi), inset 1px 1px var(--lo), inset -2px -2px #e4e4e4, inset 2px 2px var(--dk);
+}
+.rs-ruler { position: relative; height: 20px; flex: none; overflow: hidden; background: var(--face); border-bottom: 1px solid var(--lo); }
+.rs-ruler-in {
+  position: absolute; top: 3px; width: 816px; height: 14px; transform-origin: 0 0;
+  background:
+    linear-gradient(90deg, var(--face) 0 72px, transparent 72px calc(100% - 72px), var(--face) calc(100% - 72px)),
+    repeating-linear-gradient(90deg, #555 0 1px, transparent 1px 12px) 0 9px / 100% 4px no-repeat,
+    #fff;
+  box-shadow: inset 1px 1px var(--lo);
+}
+.rs-ruler-in span { position: absolute; top: 0; transform: translateX(-50%); font: 400 9px/1 var(--font); color: #222; }
+.rs-desk { flex: 1; min-height: 0; overflow: auto; background: #808080; padding: 16px; }
+.rs-page {
+  width: 816px; min-height: 1056px; margin: 0 auto; padding: 56px 64px 64px; background: #fff; color: #000;
+  box-shadow: 2px 2px 0 #000; font: 14px/1.38 "Times New Roman", Times, Georgia, serif;
+  -webkit-font-smoothing: auto;
+}
+.rs-page h1 { margin: 0 0 4px; font: 700 30px/1.15 "Times New Roman", Times, Georgia, serif; text-align: center; }
+.rs-page .rs-contact { text-align: center; margin: 0 0 8px; }
+.rs-page .rs-summary { text-align: center; font-style: italic; margin: 0 0 14px; }
+.rs-page h2 {
+  margin: 16px 0 6px; padding-bottom: 2px; border-bottom: 1px solid #000;
+  font: 700 15px/1.2 "Times New Roman", Times, Georgia, serif; text-transform: uppercase; letter-spacing: .5px;
+}
+.rs-page p { margin: 0 0 4px; }
+.rs-page .rs-org { margin-top: 8px; }
+.rs-page .rs-role { margin-top: 6px; }
+.rs-page ul { margin: 2px 0 6px; padding-left: 22px; }
+.rs-page li { margin: 0 0 2px; }
+.rs-page a { color: #0000ee; }
+.rs-status { display: flex; gap: 2px; padding: 3px 4px; flex: none; }
+.rs-status > span { padding: 2px 8px; box-shadow: inset 1px 1px var(--lo), inset -1px -1px var(--hi); white-space: nowrap; }
+.rs-status > span:nth-child(n+5):nth-child(-n+8) { color: #808080; }
+.rs-status .rs-gap { flex: 1; box-shadow: none; }
+
+/* phones */
+@media (max-width: 700px) {
+  .rs-menu, .rs-bars, .rs-ruler, .rs-status > span:not(.rs-pg):not(.rs-of) { display: none; }
+  .rs-desk { padding: 8px; }
+  .rs-page { width: auto; min-height: 0; padding: 20px 16px 28px; font-size: 14px; }
+  .rs-page h1 { font-size: 26px; }
+}

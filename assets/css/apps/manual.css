@@ -1,0 +1,36 @@
+/* ---------- MOOP language manual ---------- */
+.manual { display: flex; flex-direction: column; height: 100%; padding: 4px; gap: 6px; }
+.mn-toolbar { display: flex; flex-wrap: wrap; align-items: center; gap: 4px; flex: none; }
+.mn-toolbar button, .mn-toolbar a {
+  height: 24px; padding: 0 10px; display: inline-flex; align-items: center;
+  font: 400 11px/1 var(--font); color: var(--ink); text-decoration: none;
+}
+.mn-doc {
+  position: relative; flex: 1; min-height: 0; overflow: auto; padding: 14px 22px 30px;
+  background: #fff; font-size: 13px; line-height: 1.55; outline: none;
+  box-shadow: inset -1px -1px var(--hi), inset 1px 1px var(--lo), inset -2px -2px #e4e4e4, inset 2px 2px var(--dk);
+}
+.mn-doc h1 { font: 700 22px/1.2 var(--font); color: var(--title-a); margin: 6px 0 8px; text-align: center; }
+.mn-doc > p:nth-of-type(-n+5) { text-align: center; } /* the title page: logo, name, authors, dedication, date */
+.mn-doc h2 { font: 700 16px/1.3 var(--font); color: var(--title-a); margin: 26px 0 8px; padding-bottom: 3px; border-bottom: 1px solid var(--lo); }
+.mn-doc h3 { font: 700 13px/1.3 var(--font); margin: 18px 0 6px; }
+.mn-doc h4 { font: 700 12px/1.3 var(--font); margin: 14px 0 6px; color: #333; }
+.mn-doc p { margin: 0 0 10px; }
+.mn-doc img { display: block; margin: 0 auto; width: 140px; height: auto; }
+.mn-doc a { color: var(--title-a); }
+.mn-doc code { font: 12px/1.45 Consolas, "Cascadia Mono", "Courier New", monospace; }
+.mn-doc pre {
+  margin: 6px 0 12px; padding: 8px 10px; overflow: auto;
+  background: #f6f6f2; border: 1px solid #d8d8d0;
+}
+.mn-doc :not(pre) > code { background: #f1f1ec; padding: 0 3px; }
+.mn-doc table { border-collapse: collapse; margin: 6px 0 14px; width: 100%; }
+.mn-doc th, .mn-doc td { border: 1px solid #c8c8c8; padding: 4px 8px; text-align: left; vertical-align: top; }
+.mn-doc th { background: var(--face); font-weight: 700; }
+.mn-doc ul, .mn-doc ol { margin: 0 0 10px; padding-left: 22px; }
+
+/* phones */
+@media (max-width: 700px) {
+  .mn-doc { padding: 12px 12px 24px; }
+  .mn-toolbar button, .mn-toolbar a { height: 32px; }
+}

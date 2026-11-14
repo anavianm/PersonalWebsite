@@ -1,0 +1,24 @@
+/* Desktop stylesheet, split into modules (imported in cascade order).
+ *
+ *   core/   tokens, desktop, windows, taskbar: layout every skin shares
+ *   apps/   one file per window (Photos, Terminal, Hanoi, ...)
+ *   skins/  win98, xp, vista, win7, win10: loaded separately by <link id="skin"> in index.html,
+ *           after this file, so a skin wins ties. The Display Properties window swaps it.
+ *
+ * Colors come from tokens in core/tokens.css. Skins set their own values, and the
+ * wallpaper's accent colors (--accent-*) are set on :root by assets/desktop.js.
+ *
+ * After editing a module, bump ?v= on its import here and on main.css in index.html.
+ */
+@import url("core/tokens.css?v=3");
+@import url("core/desktop.css?v=1");
+@import url("core/window.css?v=1");
+@import url("apps/welcome.css?v=1");
+@import url("apps/photos.css?v=3");
+@import url("apps/terminal.css?v=1");
+@import url("apps/hanoi.css?v=1");
+@import url("apps/projects.css?v=1");
+@import url("apps/manual.css?v=1");
+@import url("apps/resume.css?v=1");
+@import url("apps/display.css?v=2");
+@import url("core/taskbar.css?v=1");

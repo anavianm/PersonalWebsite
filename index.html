@@ -1,111 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Maxwell Anavian ">
-    <title>Hi, I'm Max</title>
-    <link href="main.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto|Poppins:400,500i,900i|VT323&display=swap" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <style>
-        
-
-        body{
-            background-image: url("new_background.png");
-            background-position: center center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size: cover;
-            overflow: hidden;
-            height: 100%;
-            width: 100%;
-            margin: 0;
-            font-family: 'Roboto';
-        }
-
-
-        ul{
-            list-style: none;
-        }
-
-        li{
-            margin-bottom: 1em;
-        }
-
-        
-
-        .svg-container {
-            display: inline-block;
-            position: relative;
-            width: 100%;
-            overflow: hidden;
-        }
-
-        .introduction {
-            font-size: 15vw;
-            font-family: 'Roboto';
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            min-height: 75vh;
-            
-        }
-
-        #name {
-            font-size: 2.4vw;
-        }
-
-        #about {
-            font-size: 1.6vw;
-            min-height: 5vh;
-        }
-        
-
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="author" content="Maxwell Anavian">
+  <meta name="description" content="Maxwell Anavian: software developer at National Grid and photographer.">
+  <title>Max Anavian</title>
+  <link rel="preload" href="photos/photo_01.jpg" as="image">
+  <link rel="preload" href="https://unpkg.com/98.css@0.1.21/fonts/converted/ms_sans_serif.woff2" as="font" type="font/woff2" crossorigin>
+  <link href="assets/css/main.css?v=6" rel="stylesheet">
+  <link id="skin" href="assets/css/skins/win98.css?v=1" rel="stylesheet">
 </head>
-
 <body>
+  <main id="desktop" aria-label="Desktop">
+    <ul class="icons" id="icons" aria-label="Desktop icons"></ul>
+    <div id="windows"></div>
+  </main>
 
-    
-
-    
-    <header>
-        <nav class="navbar" id="nav">
-            <a class="item siteName" href="index.html">Home</a>
-            <a class="item" href="about.html">About</a>
-            <a class="item" href="projects.html">Projects</a>
-            <a class="item" href="photography.html">Photography</a>
-            <a class="item" href="contact.html">Contact</a>
-            <a class="item" href="resume.html">Resume</a>
-            <a class="item icon" href="javascript:void(0);" onclick="myFunction()">
-                <i class="fa fa-bars"></i>
-            </a>
-        </nav>
-    </header>
-
-    <div class="introduction">
-        <div>Hello</div>
-        <div id="name">My Name is Max</div>
-        <div id="about">Student, developer, home cook</div>
+  <nav class="taskbar" aria-label="Taskbar">
+    <button class="start bevel" id="startBtn" aria-haspopup="menu" aria-expanded="false">
+      <span class="start-logo" aria-hidden="true"></span>Start
+    </button>
+    <div class="tasks" id="tasks"></div>
+    <div class="tray bevel-in">
+      <a href="https://github.com/anavianm" target="_blank" rel="noopener" aria-label="GitHub" class="tray-icon" data-icon="github"></a>
+      <a href="https://www.linkedin.com/in/maxwell-anavian/" target="_blank" rel="noopener" aria-label="LinkedIn" class="tray-icon" data-icon="linkedin"></a>
+      <time id="clock"></time>
     </div>
-      
-    <script>
-        function myFunction() {
-            var x = document.getElementById("nav");
-            if (x.className === "navbar") {
-            x.className += " responsive";
-            } else {
-            x.className = "navbar";
-            }
-        }
-    </script>
+  </nav>
 
+  <div class="start-menu bevel" id="startMenu" role="menu" hidden>
+    <ul id="startList"></ul>
+  </div>
+
+  <div class="shutdown" id="shutdown" hidden>
+    <p>It's now safe to turn off<br>your computer.</p>
+    <button class="bevel" id="rebootBtn">Restart</button>
+  </div>
+
+  <script src="assets/desktop.js?v=47"></script>
 </body>
-    
-
-
+</html>

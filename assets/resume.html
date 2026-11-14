@@ -1,0 +1,61 @@
+<!-- Resume shown in the Word-style Resume window. Source: "Maxwell Anavian Resume (General)" in Google Drive.
+     Phone number and personal email are left off the public site on purpose. -->
+<h1>Maxwell Anavian</h1>
+<p class="rs-contact">Greater Boston, MA | <a href="https://www.linkedin.com/in/maxwell-anavian" target="_blank" rel="noopener">linkedin.com/in/maxwell-anavian</a> | <a href="https://maxwellanavian.com">maxwellanavian.com</a></p>
+<p class="rs-summary">Senior software engineer building Azure-hosted Rust and Python APIs, CI/CD pipelines and grid-planning software.</p>
+
+<h2>Professional Experience</h2>
+
+<p class="rs-org"><b>National Grid</b>, Waltham, MA | <b>June 2022 – Present</b></p>
+
+<p class="rs-role"><b><i>Senior Software Engineer</i></b> | June 2025 – Present</p>
+<ul>
+  <li>Built a self-service extract API for ~20 grid planning engineers across New England and New York, delivering updated grid models hourly instead of monthly and data fixes in a day instead of months.</li>
+  <li>Architected a framework that models planned grid construction for New England and New York, so planners can analyze future network changes separately from the as-operated grid.</li>
+  <li>Cut server costs 97% ($4K to ~$100/month, $48K/year) by redesigning an always-on service as scale-to-zero microservices: a Rust API (migrated from FastAPI) and Python queue workers on Azure Container Apps Jobs.</li>
+  <li>Built AI developer tools adopted by a team of 6 engineers, including a ServiceNow change-request connector slated for org-wide rollout.</li>
+  <li>Technical lead on a ~10-person team, owning architecture and design decisions for the CYME planning tools; mentored 2 interns (one per year) who shipped observability dashboards.</li>
+</ul>
+
+<p class="rs-role"><b><i>Software Engineer II</i></b> | June 2024 – June 2025</p>
+<ul>
+  <li>Led the CYME 4.3 to 9.2 upgrade, a roughly ten-year software jump for grid planning engineers that retired legacy Magik code and unblocked their move to Windows 11.</li>
+  <li>Designed most of the founding Azure architecture for a new team: Terraform deployments, federated-identity auth and GitHub Actions promotion pipelines across five environments.</li>
+  <li>Deployed the containerized extract pipeline to production on Azure Functions, Container Apps and Blob Storage, delivering feeder extracts with near-100% reliability.</li>
+  <li>Scaled the engine to 3,000+ feeders across New England and New York, with full runs and traces in ~6 minutes.</li>
+</ul>
+
+<p class="rs-role"><b><i>Software Engineer</i></b> | June 2023 – June 2024</p>
+<ul>
+  <li>Built the core Python engine that converts GIS network data into CYME grid-simulation models, porting its logic from legacy Magik (GE Smallworld) code.</li>
+  <li>Solved network topology and tracing edge cases (hypernodes, switchgear, buses, elbows) for accurate models.</li>
+  <li>Deployed six developer-portal connector microservices with Helm, ArgoCD and External Secrets.</li>
+</ul>
+
+<p class="rs-role"><b><i>Associate Software Engineer</i></b> | June 2022 – June 2023</p>
+<ul>
+  <li>Migrated the entire company from Bitbucket to GitHub, building the GitHub connector's Python REST API and self-service onboarding in the Backstage developer portal.</li>
+  <li>Built reusable Jenkins pipeline libraries for Maven, React and .NET/Docker apps, adding regulatory (FERC) approval gates and automatic per-PR Jira ticket lists.</li>
+</ul>
+
+<p class="rs-org"><b>Information Development America Inc.</b>, Cambridge, MA | <b>June 2021 – August 2021</b></p>
+<p class="rs-role"><b><i>Software Engineering Intern</i></b></p>
+<ul>
+  <li>Built an internal recruitment management system in Java with a bilingual English and Japanese interface.</li>
+  <li>Presented to upper management and wrote monthly cybersecurity reports, both in Japanese.</li>
+</ul>
+
+<h2>Education</h2>
+
+<p class="rs-org"><b>Tufts University</b>, Medford, MA</p>
+<p>Bachelor of Science, Computer Science and Mathematics | <b>Project:</b> MOOP, a language compiler in OCaml/LLVM</p>
+
+<h2>Technical Skills</h2>
+
+<p><b>Languages:</b> Python, Rust, C#/.NET, C++, Java, SQL, JavaScript</p>
+<p><b>Cloud:</b> Azure (Functions, Container Apps and Jobs, App Service, Storage, App Insights, Entra ID), Snowflake</p>
+<p><b>DevOps:</b> Terraform, Docker (GHCR, ACR, JFrog Artifactory), GitHub Actions, Jenkins/CloudBees, Helm, ArgoCD</p>
+<p><b>Frameworks:</b> FastAPI, Pydantic, pytest, Backstage</p>
+<p><b>Practices:</b> Distributed systems, microservices, Agile (SAFe), CI/CD, infrastructure as code</p>
+<p><b>Domain:</b> Electric distribution network modeling (CYME, ADMS, GE Smallworld GIS, ASPEN)</p>
+<p><b>Spoken Languages:</b> English, Japanese (fluent)</p>

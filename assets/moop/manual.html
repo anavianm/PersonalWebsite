@@ -1,0 +1,616 @@
+<p align="center"><img src="assets/moop/moopert.png" alt="Moopert, the MOOP cow" width="180"></p>
+
+<h1 id="microoop-language-manual">MicroOOP Language Manual</h1>
+<p><strong>MOOP</strong></p>
+<p>Anthony Tranduc<br>
+Isabelle Lai<br>
+Jacqueline Chin<br>
+Maxwell Anavian</p>
+<p><em>Dedicated to Moopert. Moopert lives on.</em></p>
+<p>2/28/2022</p>
+<h2 id="contents">Contents</h2>
+<ol>
+<li><a href="#1-introduction">Introduction</a></li>
+<li><a href="#2-reading-directions">Reading Directions</a></li>
+<li><a href="#3-lexical-conventions">Lexical Conventions</a></li>
+<li><a href="#4-data-types">Data Types</a></li>
+<li><a href="#5-operators">Operators</a></li>
+<li><a href="#6-expressions">Expressions</a></li>
+<li><a href="#7-statements">Statements</a></li>
+<li><a href="#8-methods">Methods</a></li>
+<li><a href="#9-classes">Classes</a></li>
+<li><a href="#10-programs">Programs</a></li>
+<li><a href="#11-built-in-functions">Built-in Functions</a></li>
+<li><a href="#12-standard-library">Standard Library</a></li>
+</ol>
+<h2 id="1-introduction">1 Introduction</h2>
+<p>This manual describes the syntax and semantics for the MicroOOP language, providing users with a resource to write their own complete programs in MicroOOP. MicroOOP is an object oriented language based on the MicroC language that includes built-in support for Classes, Objects, Inheritance, Encapsulation, Strings, and cool, cute comments.</p>
+<h2 id="2-reading-directions">2 Reading Directions</h2>
+<p>The MicroOOP Language Reference Manual uses the following notation:</p>
+<ul>
+<li>prose - represented in plain font</li>
+<li><code>inline code</code> - represented in typewriter font</li>
+<li>blocks of code - represented like the following block</li>
+</ul>
+<p><code>class Main {
+      string name = "Hello World";
+  }</code></p>
+<ul>
+<li><em>grammar rules</em> - represented in italicized font</li>
+</ul>
+<h2 id="3-lexical-conventions">3 Lexical Conventions</h2>
+<h3 id="31-identifiers">3.1 Identifiers</h3>
+<p>Identifiers may contain letters, digits, and '_'. They must begin with an uppercase or lowercase letter.</p>
+<h3 id="32-keywords">3.2 Keywords</h3>
+<p>Reserved keywords are listed here:</p>
+<pre><code>if      else    for     while   return  int     bool    float
+string  void    true    false   class   this    super
+print   new     null
+</code></pre>
+<h3 id="33-symbols">3.3 Symbols</h3>
+<p>Reserved symbols are listed here:</p>
+<pre><code>( ) &lt; &gt; = &lt;- . { } + - / * ! | ;
+</code></pre>
+<h3 id="34-whitespace">3.4 Whitespace</h3>
+<p>Newlines, tabs, and spaces are ignored.</p>
+<h3 id="35-comments">3.5 Comments</h3>
+<p>Single line comments are denoted with a <code>//</code> at the beginning of the line.</p>
+<p>The official way to denote multi-line comments is as follows:</p>
+<pre><code>/* p.s. there may be another way to
+   comment multiple lines ;) */
+</code></pre>
+<h3 id="36-file-extensions">3.6 File Extensions</h3>
+<p>It is standard convention for MicroOOP files to end in <code>.moop</code></p>
+<h2 id="4-data-types">4 Data Types</h2>
+<h3 id="41-primitive-data-types">4.1 Primitive Data Types</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Formal Type</th>
+<th>Example</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Integer</td>
+<td><code>int</code></td>
+<td><code>1</code>, <code>-42</code></td>
+<td>Represented by numerals, optionally led by '-'.</td>
+</tr>
+<tr>
+<td>Float</td>
+<td><code>float</code></td>
+<td><code>1.813</code></td>
+<td>Uses '.' to denote decimal value</td>
+</tr>
+<tr>
+<td>Boolean</td>
+<td><code>bool</code></td>
+<td><code>true</code>/<code>false</code></td>
+<td>Only has two values and two keywords</td>
+</tr>
+<tr>
+<td>String</td>
+<td><code>string</code></td>
+<td><code>"bruh"</code></td>
+<td>Any sequence of characters encased in double parentheses</td>
+</tr>
+<tr>
+<td>Void</td>
+<td><code>void</code></td>
+<td>n/a</td>
+<td>Void has no value and reprensents a lack of a data type</td>
+</tr>
+<tr>
+<td>Null</td>
+<td><code>null</code></td>
+<td><code>null</code></td>
+<td>Null represents no value</td>
+</tr>
+</tbody>
+</table>
+<h3 id="42-interchanging-types">4.2 Interchanging Types</h3>
+<p>Booleans have corresponding integer values. <code>true</code> has a value of 1. <code>false</code> has a value of 0.</p>
+<p>Null is a special data type. Any data type can have a null value. For example, a variable can be of type float but have a null value.</p>
+<h2 id="5-operators">5 Operators</h2>
+<h3 id="51-operators-for-numeric-arithmetic">5.1 Operators for Numeric Arithmetic</h3>
+<p>These operators can be used with integers and floats. When used with integers, they return integers. When used with floats, they return floats. All the operators are binary unless noted otherwise.</p>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>+</code></td>
+<td>Numeric addition</td>
+</tr>
+<tr>
+<td><code>-</code></td>
+<td>Numeric subtraction</td>
+</tr>
+<tr>
+<td><code>-</code></td>
+<td>Unary inversion</td>
+</tr>
+<tr>
+<td><code>*</code></td>
+<td>Numeric multiplication</td>
+</tr>
+<tr>
+<td><code>/</code></td>
+<td>Numeric division</td>
+</tr>
+</tbody>
+</table>
+<h3 id="52-logical-operators">5.2 Logical Operators</h3>
+<p>These operators can be used with booleans and return booleans.</p>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&amp;&amp;</code></td>
+<td>Binary logical and</td>
+</tr>
+<tr>
+<td><code>\|\|</code></td>
+<td>Binary logical or</td>
+</tr>
+<tr>
+<td><code>!</code></td>
+<td>Unary logical negation</td>
+</tr>
+</tbody>
+</table>
+<h3 id="53-comparison-operators">5.3 Comparison Operators</h3>
+<p>These operators can be used with integers, floats, and booleans. When used, they return a boolean value. All the operators are binary unless noted otherwise.</p>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>==</code></td>
+<td>Equivalence</td>
+</tr>
+<tr>
+<td><code>&gt;</code></td>
+<td>Less than</td>
+</tr>
+<tr>
+<td><code>&lt;</code></td>
+<td>Greater than</td>
+</tr>
+<tr>
+<td><code>&gt;=</code></td>
+<td>Greater than or Equal to</td>
+</tr>
+<tr>
+<td><code>&lt;=</code></td>
+<td>Less than or Equal to</td>
+</tr>
+</tbody>
+</table>
+<h3 id="54-other-operators">5.4 Other Operators</h3>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>~</code></td>
+<td>Negates accessibility of instance variables or methods. When used with an instance variable, the scope of the variable becomes public. When used with a method, the scope of the method becomes private.</td>
+</tr>
+<tr>
+<td>(Dot) <code>.</code></td>
+<td>Used to access a member of an object</td>
+</tr>
+<tr>
+<td><code>&lt;-</code></td>
+<td>Used to extend parent classes</td>
+</tr>
+</tbody>
+</table>
+<p>Example in Java</p>
+<pre><code class="language-java">public int x
+private string Animal() { return &quot;MOO&quot; }
+</code></pre>
+<p>Translates to in MOOP</p>
+<pre><code>~int x
+~string Animal() { return &quot;MOO&quot; }
+</code></pre>
+<h2 id="6-expressions">6 Expressions</h2>
+<h3 id="61-literals">6.1 Literals</h3>
+<p>Any literal is an expression.</p>
+<p>Numeric literals are either integers or floats, and may consist of a sequence of digits, with or without decimals or the negative sign:</p>
+<pre><code>12345
+123.45
+-42
+</code></pre>
+<p>Boolean literals are represented by the keywords <code>true</code> or <code>false</code>.</p>
+<p>String literals consist of a sequence of characters within a set of double quotes:</p>
+<pre><code>&quot;Hello&quot;
+&quot;Chicken_Nuggets32&quot;
+</code></pre>
+<h3 id="62-operator-expressions">6.2 Operator Expressions</h3>
+<p>Expressions can be formed with unary operators (<em>unop</em>) or binary operators (<em>binop</em>) and other expressions (<em>expr</em>) as follows:</p>
+<pre><code>unop expr
+expr binop expr
+</code></pre>
+<p>The type of exprs used in the operator expression and the type of expr returned by each operator expression will depend on the operator. See Section 5 Operators above for more details.</p>
+<h3 id="63-assignment-expressions">6.3 Assignment Expressions</h3>
+<p>The assignment expression will store the expression with a specific identifier. The expression is formed as follows:</p>
+<pre><code>identifier = expr
+</code></pre>
+<h3 id="64-method-calls">6.4 Method Calls</h3>
+<p>Since methods can only be defined within the scope of a class, you must call the method using the following form:</p>
+<pre><code>identifier-1.identifier-2(&lt;optional exprs&gt;)
+</code></pre>
+<p>Identifier-1 corresponds to the class or object name. Class names are used for static methods and object names are used for instance methods. Identifier-2 corresponds to the method name.</p>
+<h3 id="65-constructor-calls">6.5 Constructor Calls</h3>
+<p>A constructor call creates an instance of that class. The expression is formed using the "new" keyword followed by the class name identifier to denote that the constructor is being called. It is formed as follows:</p>
+<pre><code>new identifier(&lt;optional exprs&gt;)
+</code></pre>
+<h4 id="651-parent-constructor-super-calls">6.5.1 Parent Constructor (super) Calls</h4>
+<p>In the instance in which a class is the child of another class i.e</p>
+<pre><code>class Child &lt;- Parent {
+    ...
+}
+</code></pre>
+<p>The super keyword can be used in the constructor of the Child class to explicitly create an instance of the Child class using the Parent class constructor with any necessary parameters.</p>
+<pre><code>super(&lt;optional exprs&gt;);
+</code></pre>
+<h2 id="7-statements">7 Statements</h2>
+<h3 id="71-expressions-as-statements">7.1 Expressions as Statements</h3>
+<p>An expression may take the form of a statement if followed by a semicolon.</p>
+<pre><code>expr;
+</code></pre>
+<p>For example, assignments can be made as a standalone statement:</p>
+<pre><code>x = 10;
+</code></pre>
+<h4 id="711-declaring-and-assigning-variables-as-statements">7.1.1 Declaring and assigning variables as statements</h4>
+<p>Variables can be declared and assigned with the format:</p>
+<pre><code>datatype identifier = expr;
+</code></pre>
+<p>For example</p>
+<pre><code>int    moop  = 10;
+float  ert   = 10.0;
+string lives = &quot;Moopert&quot;;
+bool   on    = true;
+</code></pre>
+<h3 id="72-return-statements">7.2 Return Statements</h3>
+<p>Return statements exit the current method and denote what value will be returned to the caller of the method. They have the form:</p>
+<pre><code>return optional_expression;
+</code></pre>
+<p>If no expression is given, the return type is void.</p>
+<h3 id="73-conditionals">7.3 Conditionals</h3>
+<p>Conditional statements execute statements based on the value of the expression. They have two forms. The first form is:</p>
+<pre><code>if ( expr ) { statement }
+</code></pre>
+<p>In the first form, the statement is only executed if the expression evaluates to a non-zero value. The second form is:</p>
+<pre><code>if ( expr ) { statement-1 } else { statement-2 }
+</code></pre>
+<p>This form functions similar to the first form. However, if the expression evaluates to zero, statement-2 is executed.</p>
+<p>For example</p>
+<pre><code>int x = 10;
+int y = 5;
+if (x == y) {
+    print(&quot;moopert&quot;);
+} else {
+    print(&quot;shmoopert&quot;);
+}
+</code></pre>
+<h3 id="74-while-loops">7.4 While Loops</h3>
+<p>While loop statements use the while keyword. They have the form:</p>
+<pre><code>while ( expr ) { statement }
+</code></pre>
+<p>For example</p>
+<pre><code>int x = 1;
+while (x &lt; 10) {
+    x = x + 1;
+}
+</code></pre>
+<p>As long as the expression within the parentheses evaluates to a non-zero value, the sub-statement is repeatedly executed. The expression is always evaluated before the sub-statement and is re-evaluated every repeated iteration.</p>
+<h3 id="75-for-loops">7.5 For Loops</h3>
+<p>For loop statements use the for keyword. They are similar to while loops, but specify three additional expressions to be used as a test to continue the loop. They have the form:</p>
+<pre><code>for ( expr-1; expr-2; expr-3) { statement }
+</code></pre>
+<p>For example</p>
+<pre><code>int x = 0;
+for (int i = 0; x &lt; 10; i = i + 1) {
+    x = x + 1;
+}
+</code></pre>
+<p>Expr-1 is an initialization of a variable to be used in expr-2. Expr-2 is evaluated before each iteration. Expr-3 modifies whatever is initialized in expr-1 after each execution of the statement.</p>
+<p>This is equivalent to using the following while loop:</p>
+<pre><code>expr-1;
+while ( expr-2 ) {
+    statement;
+    expr-3;
+}
+</code></pre>
+<p>Expr-1 and expr-3 are optional. The loop will execute as expressed in the while loop expansion above without expr-1 and expr-3.</p>
+<h2 id="8-methods">8 Methods</h2>
+<p>Methods are defined within class declarations. They take the form:</p>
+<pre><code>datatype identifier ( &lt;optional variables&gt; ) {
+    statement
+}
+</code></pre>
+<p>Method declarations must start by providing the output type, followed by an identifier. The optional list of formal variables, separated by commas, should consist of the type and identifier for each formal variable. The body of the method consists of statements. Each body should conclude with a return statement that returns the appropriate type. The only exception to this rule is the void return type. In this case, the return statement can be omitted or simply <code>return;</code>.</p>
+<h2 id="9-classes">9 Classes</h2>
+<p>Classes define the contents of objects. They are declared using the class keyword and consist of variables and method definitions.</p>
+<h3 id="91-declaration">9.1 Declaration</h3>
+<p>Class declarations have the following form:</p>
+<pre><code>class identifier {
+    body
+}
+</code></pre>
+<p>The class identifier must begin with an uppercase letter. The body can consist of variable and method declarations.</p>
+<h3 id="92-constructors">9.2 Constructors</h3>
+<p>All classes must have a constructor declaration. Constructors have the form:</p>
+<pre><code>identifier (&lt;optional variables&gt;) { statements }
+</code></pre>
+<p>The identifier must correspond to the class name.</p>
+<p>The constructor for the Dog class is shown below:</p>
+<pre><code>class Dog {
+    string name;
+
+    Dog(string name) {
+        this.name = name;
+    }
+}
+</code></pre>
+<h3 id="93-inheritence">9.3 Inheritence</h3>
+<h4 id="931-extends">9.3.1 Extends</h4>
+<p>Inheritence is signified using the <code>&lt;-</code> symbol.</p>
+<p>The extends symbol is used in the format identifier-1 <code>&lt;-</code> identifier-2, where identifier-1 is the child class and identifier-2 is the parent class.</p>
+<p>For example, the code block can be read as "Class Dog Extends Animal."</p>
+<pre><code>class Dog &lt;- Animal {}
+</code></pre>
+<p>A class can only have one parent at most, although multiple classes can inherit from the same parent class.</p>
+<h4 id="932-super">9.3.2 Super</h4>
+<p>In order to access the constructor of a parent class, children have access to the super keyword. The parent constructor can be invoked like so:</p>
+<pre><code>class Animal {
+    Animal() {
+        print(&quot;Animal Constructor&quot;);
+    }
+}
+
+class Dog &lt;- Animal {
+    Dog() {
+        super();
+        print(&quot;Dog Constructor&quot;);
+    }
+}
+</code></pre>
+<p>Output:</p>
+<pre><code>$ &gt; Animal Constructor
+$ &gt; Dog Constructor
+</code></pre>
+<h4 id="933-this">9.3.3 This</h4>
+<p>The this keyword can be used to access the current class' instance variables and methods. For example:</p>
+<pre><code>class Dog {
+    string sound;
+    Dog(string noise) {
+        this.sound = noise;
+    }
+}
+</code></pre>
+<p>this cannot be used to access the constructor.</p>
+<h3 id="94-scope">9.4 Scope</h3>
+<p>Member variables of a class have a private scope by default. This means that the variable can only be accessed within the class declaration it is defined in. Methods of a class have a public scope by default. This means that the method can be called from anywhere within the program.</p>
+<p>Both scopes can be changed using the invert operator detailed in section 5.4 Other Operators.</p>
+<h2 id="10-programs">10 Programs</h2>
+<p>A program in MicroOOP is defined as a sequence of classes. Each program must have at least a Main class with a <code>main()</code> method defined. These are the first parts of the program to be evaluated.</p>
+<p>The main method must have the following method definition: <code>int main()</code>.</p>
+<p>The following is a full example of a working program:</p>
+<pre><code>// This is a single line comment.
+/* This is a multi
+   line comment. */
+
+/* This example code demonstrates how to create objects and how to
+   inherit from other objects.
+
+   Note that the main program is a class itself. */
+
+class Main {
+    int main() {
+        print(&quot;Hello World&quot;)
+        Dog moopertTheDog = new Dog(&quot;Moopert&quot;, 5);
+
+        moopertTheDog.animalNoise();
+        moopertTheDog.getAge();
+        return 0;
+    }
+}
+
+class Animal {
+    /* public field variables */
+    ~string name;
+    ~int age;
+
+    Animal(string nameInput, int ageInput) {
+        this.name = nameInput;
+        this.age = ageInput;
+    }
+
+    int getAge() {
+        return age;
+    }
+
+    void animalNoise() {
+        print(&quot;Generic animal noise&quot;);
+    }
+}
+
+class Dog &lt;- Animal {
+    Dog(string nameInput, int ageInput) {
+        super(nameInput, ageInput);
+    }
+
+    // example of overriding the parent class animalNoise function
+    void animalNoise() {
+        print(&quot;MOO&quot;);
+    }
+}
+</code></pre>
+<h2 id="11-built-in-functions">11 Built-in Functions</h2>
+<p><code>void printi(int n)</code><br>
+Prints an integer n to standard out.</p>
+<p><code>void printb(bool b)</code><br>
+Prints a bool b to standard out.</p>
+<p><code>void printf(float f)</code><br>
+Prints a float f to standard out.</p>
+<p><code>void print(string s)</code><br>
+Prints a string s to standard out.</p>
+<p><code>void toString(int n)</code><br>
+Converts int to string.</p>
+<h2 id="12-standard-library">12 Standard Library</h2>
+<p>The standard library is written in MicroOOP, providing users with useful classes and methods to help them write their own MicroOOP programs. These standard library additions also provide examples to users for what code in MicroOOP looks like.</p>
+<h3 id="121-linked-list">12.1 Linked List</h3>
+<p>The following is a basic implementation of a LinkedList. The Node class represents one element of the list, and the LinkedList class contains a LinkedList constructor, insert method, delete method, a method to get an element by index, a method to get the size of the LinkedList, and a method to print the data of the LinkedList.</p>
+<pre><code>class Node {
+    int data;
+    Node next;
+
+    Node(int data) {
+        this.data = data;
+    }
+
+    void setNext(int data) {
+        this.next = new Node(data);
+    }
+
+}
+</code></pre>
+<pre><code>class LinkedList {
+    Node first;
+    int size;
+
+    LinkedList() {
+        this.size = 0;
+    }
+
+    void insertElem(int elem) {
+        if (this.size == 0) {
+            this.first = new Node(elem);
+        } else {
+            Node curr = this.first;
+            for (int i = 0; i &lt; this.size; i = i + 1) {
+                curr = curr.next;
+            }
+            curr.setNext(elem);
+        }
+        this.size = this.size + 1;
+    }
+
+    void deleteElem(int index) {
+        if (index == 0) {
+            this.first = first.next;
+            return;
+        }
+
+        Node prev = this.first;
+        Node curr = this.first.next;
+
+        for (int i = 0; i &lt; size; i = i + 1) {
+            if (i == index) {
+                prev.next = curr.next;
+                this.size = this.size - 1;
+                return;
+            } else {
+                prev = curr;
+                curr = curr.next;
+            }
+        }
+
+        print(&quot;Element does not exist.&quot;);
+    }
+
+    int getSize() {
+        return this.size;
+    }
+
+    int getElem(int index) {
+        Node curr = this.first;
+        for (int i = 0; i &lt; index; i = i + 1) {
+            curr = curr.next;
+        }
+        return curr.data;
+    }
+
+    void printLinkedList() {
+        Node curr = this.first;
+        for (int i = 0; i &lt; index; i = i + 1) {
+            printi(this.data);
+            curr = curr.next;
+        }
+    }
+
+
+
+}
+</code></pre>
+<h3 id="122-stack">12.2 Stack</h3>
+<p>The following is basic implementation of a Stack using a LinkedList as the underlying structure. It has the basic push and pop functionalities of a standard Stack.</p>
+<pre><code>class Stack {
+    LinkedList stack;
+
+    Stack() {
+        this.stack = new LinkedList();
+    }
+
+    void push(int elem) {
+        stack.insertElem(elem);
+    }
+
+    int pop() {
+        if (stack.getSize() &gt; 0) {
+            int poppedElem = stack.getElem(stack.getSize() - 1);
+            stack.deleteElem(stack.getSize() - 1);
+            return poppedElem;
+        }
+        return null;
+
+    }
+}
+</code></pre>
+<h3 id="123-queue">12.3 Queue</h3>
+<p>The following is a basic implementation of a Queue using a LinkedList as the underlying structure. It has the basic queue and dequeue functionalities of a standard Queue.</p>
+<pre><code>class Queue {
+    LinkedList queue;
+
+    Queue() {
+        this.queue = new LinkedList();
+    }
+
+    void queue(int elem) {
+        queue.insertElem(elem);
+    }
+
+    int dequeue() {
+        if (queue.getSize() &gt; 0) {
+            int dequeuedElem = queue.getElem(0);
+            queue.deleteElem(0);
+            return dequeuedElem;
+        }
+        return null;
+    }
+
+}
+</code></pre>
