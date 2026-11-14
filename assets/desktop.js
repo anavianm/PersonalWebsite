@@ -10,9 +10,10 @@
     about: svg(`<rect x="6" y="3" width="20" height="26" fill="#0b0b0b"/><rect x="7" y="4" width="18" height="24" fill="#fff"/><rect x="7" y="4" width="18" height="4" fill="#2a7fd4"/><rect x="10" y="11" width="12" height="2" fill="#888"/><rect x="10" y="15" width="10" height="2" fill="#888"/><rect x="10" y="19" width="12" height="2" fill="#888"/><rect x="10" y="23" width="7" height="2" fill="#888"/>`),
     projects: svg(`<rect x="2" y="7" width="12" height="4" fill="#0b0b0b"/><rect x="3" y="8" width="10" height="3" fill="#f2c94c"/><rect x="2" y="10" width="28" height="18" fill="#0b0b0b"/><rect x="3" y="11" width="26" height="16" fill="#f2c94c"/><rect x="3" y="11" width="26" height="2" fill="#fff3b0"/><rect x="3" y="25" width="26" height="2" fill="#c9962a"/>`),
     photos: svg(`<rect x="3" y="9" width="26" height="18" fill="#0b0b0b"/><rect x="4" y="10" width="24" height="16" fill="#9aa3ad"/><rect x="10" y="6" width="10" height="4" fill="#0b0b0b"/><rect x="11" y="7" width="8" height="3" fill="#9aa3ad"/><rect x="10" y="12" width="12" height="12" fill="#0b0b0b"/><rect x="12" y="14" width="8" height="8" fill="#2a7fd4"/><rect x="13" y="15" width="3" height="3" fill="#bfe0ff"/><rect x="23" y="12" width="3" height="2" fill="#ffd23f"/>`),
-    resume: svg(`<rect x="6" y="3" width="20" height="26" fill="#0b0b0b"/><rect x="7" y="4" width="18" height="24" fill="#fff"/><rect x="10" y="7" width="8" height="2" fill="#0b2a78"/><rect x="10" y="11" width="12" height="1" fill="#888"/><rect x="10" y="13" width="12" height="1" fill="#888"/><rect x="10" y="15" width="9" height="1" fill="#888"/><rect x="4" y="19" width="16" height="7" fill="#d43a2f"/><rect x="6" y="21" width="2" height="3" fill="#fff"/><rect x="9" y="21" width="3" height="3" fill="#fff"/><rect x="13" y="21" width="3" height="3" fill="#fff"/>`),
+    resume: svg(`<rect x="6" y="3" width="20" height="26" fill="#0b0b0b"/><rect x="7" y="4" width="18" height="24" fill="#fff"/><rect x="10" y="8" width="12" height="1" fill="#888"/><rect x="10" y="11" width="12" height="1" fill="#888"/><rect x="10" y="14" width="9" height="1" fill="#888"/><rect x="3" y="17" width="14" height="10" fill="#0b0b0b"/><rect x="4" y="18" width="12" height="8" fill="#2a5fb4"/><rect x="6" y="20" width="2" height="4" fill="#fff"/><rect x="9" y="21" width="2" height="3" fill="#fff"/><rect x="12" y="20" width="2" height="4" fill="#fff"/>`),
     contact: svg(`<rect x="3" y="8" width="26" height="18" fill="#0b0b0b"/><rect x="4" y="9" width="24" height="16" fill="#fff"/><rect x="5" y="10" width="2" height="2" fill="#0b0b0b"/><rect x="7" y="12" width="2" height="2" fill="#0b0b0b"/><rect x="9" y="14" width="2" height="2" fill="#0b0b0b"/><rect x="11" y="16" width="2" height="2" fill="#0b0b0b"/><rect x="13" y="17" width="6" height="2" fill="#0b0b0b"/><rect x="19" y="16" width="2" height="2" fill="#0b0b0b"/><rect x="21" y="14" width="2" height="2" fill="#0b0b0b"/><rect x="23" y="12" width="2" height="2" fill="#0b0b0b"/><rect x="25" y="10" width="2" height="2" fill="#0b0b0b"/><rect x="22" y="20" width="4" height="3" fill="#d43a2f"/>`),
     terminal: svg(`<rect x="3" y="5" width="26" height="22" fill="#0b0b0b"/><rect x="4" y="6" width="24" height="3" fill="#c3c3c3"/><rect x="4" y="9" width="24" height="17" fill="#111"/><rect x="7" y="12" width="2" height="2" fill="#3fc46b"/><rect x="9" y="14" width="2" height="2" fill="#3fc46b"/><rect x="7" y="16" width="2" height="2" fill="#3fc46b"/><rect x="13" y="17" width="7" height="2" fill="#3fc46b"/>`),
+    manual: svg(`<rect x="5" y="3" width="22" height="26" fill="#0b0b0b"/><rect x="6" y="4" width="20" height="24" fill="#2a5fb4"/><rect x="6" y="4" width="3" height="24" fill="#183d7a"/><rect x="24" y="5" width="2" height="22" fill="#e8e8e8"/><rect x="12" y="8" width="10" height="7" fill="#f2c94c"/><rect x="13" y="9" width="8" height="5" fill="#fff3b0"/><rect x="15" y="10" width="2" height="1" fill="#0b0b0b"/><rect x="18" y="10" width="2" height="1" fill="#0b0b0b"/><rect x="12" y="19" width="10" height="2" fill="#c9d6ff"/><rect x="12" y="22" width="7" height="2" fill="#c9d6ff"/>`),
     hanoi: svg(`<rect x="2" y="25" width="28" height="4" fill="#0b0b0b"/><rect x="3" y="26" width="26" height="2" fill="#a0652b"/><rect x="7" y="7" width="2" height="18" fill="#5a3a1a"/><rect x="15" y="7" width="2" height="18" fill="#5a3a1a"/><rect x="23" y="7" width="2" height="18" fill="#5a3a1a"/><rect x="2" y="21" width="12" height="4" fill="#0b0b0b"/><rect x="3" y="22" width="10" height="2" fill="#d43a2f"/><rect x="3" y="17" width="10" height="4" fill="#0b0b0b"/><rect x="4" y="18" width="8" height="2" fill="#f2c94c"/><rect x="19" y="21" width="10" height="4" fill="#0b0b0b"/><rect x="20" y="22" width="8" height="2" fill="#3fc46b"/><rect x="5" y="13" width="6" height="4" fill="#0b0b0b"/><rect x="6" y="14" width="4" height="2" fill="#2a7fd4"/>`),
     wallpaper: svg(`<rect x="3" y="5" width="26" height="22" fill="#0b0b0b"/><rect x="4" y="6" width="24" height="20" fill="#2a3a7a"/><rect x="18" y="9" width="4" height="4" fill="#ffd23f"/><rect x="4" y="19" width="24" height="7" fill="#3a8a4a"/><rect x="8" y="15" width="8" height="4" fill="#3a8a4a"/>`),
     shutdown: svg(`<rect x="7" y="7" width="18" height="18" fill="#0b0b0b"/><rect x="8" y="8" width="16" height="16" fill="#d43a2f"/><rect x="15" y="10" width="2" height="7" fill="#fff"/><rect x="11" y="13" width="2" height="7" fill="#fff"/><rect x="19" y="13" width="2" height="7" fill="#fff"/><rect x="12" y="20" width="8" height="2" fill="#fff"/>`),
@@ -245,6 +246,7 @@
   moop -a <file>   show the AST (-s SAST, -l LLVM IR)
   run              run the file in the editor
   hanoi            play Tower of Hanoi
+  manual           read the MOOP language manual
   cls              clear the screen
   echo  ver  help  exit
 
@@ -407,6 +409,7 @@ Edits last until you reload the page.
       cls: () => { out.textContent = ""; },
       exit: () => close("terminal"),
       hanoi: () => { say("[opening Tower of Hanoi]", "t-dim"); open("hanoi"); },
+      manual: () => { say("[opening the MOOP language manual]", "t-dim"); open("manual"); },
       cd: (args) => {
         if (!args.length) { say(where()); return; }
         const d = findDir(args.join(" "));
@@ -799,6 +802,332 @@ Edits last until you reload the page.
     newGame();
   }
 
+  /* ---------- projects: an Explorer folder of colored project folders ---------- */
+  // Each project gets a folder in its own color; opening one shows its details window.
+  // desc: null means the write-up hasn't been written yet.
+  const PROJECTS = [
+    {
+      id: "moop", name: "MOOP", color: "#e8952b", year: 2022, kind: "Programming language and compiler", tech: "OCaml, LLVM",
+      art: `<div class="pj-term" aria-hidden="true"><span class="t-prompt">C:\\MOOP&gt;</span> moop vm.moop<br>MOOP VM: a stack machine<br>written in MOOP<br><br>Program 1: factorials<br>1<br>2<br>6<br>24<br>120<span class="pj-cursor">_</span></div>`,
+      desc: "The Micro OOP language and its compiler, built at Tufts with Isabelle Lai, Anthony Tranduc and Jacqueline Chin. MOOP has classes, single inheritance and a standard library of lists, stacks and queues. The compiler is written in OCaml and generates LLVM IR. It runs live on this site: write MOOP in the Terminal, or play Tower of Hanoi with a MOOP backend.",
+      actions: [["Open in Terminal", "terminal"], ["Language manual", "manual"], ["Play Tower of Hanoi", "hanoi"]],
+      links: [["View on GitHub", "https://github.com/anavianm/Moop"]],
+    },
+    {
+      id: "hanoi", name: "Tower of Hanoi", color: "#1d8a4c", year: 2026, kind: "Browser game",
+      tech: "MOOP backend, HTML, CSS, JavaScript",
+      cover: "ProjectSlides/hanoi.svg",
+      desc: "Tower of Hanoi you can play on this site, with a backend written in MOOP. Every move is checked by hanoi.moop on the real MOOP compiler: it validates the board, enforces the rules, spots the win, and can solve the puzzle optimally from any position. Edit the backend in the Terminal and the game plays by your rules.",
+      actions: [["Play it", "hanoi"], ["View the MOOP backend", "file:" + HANOI_FILE]],
+      links: [["hanoi.moop on GitHub", "https://github.com/anavianm/Moop/blob/showcase/showcase/hanoi.moop"]],
+    },
+    {
+      id: "um", name: "um", color: "#8a8f99", card: 1, year: 2020, kind: "Virtual machine", tech: "C",
+      desc: "A virtual machine for the Universal Machine (UM) language from Tufts, with its registers and memory built from scratch in C.",
+      links: [["View on GitHub", "https://github.com/anavianm/um"]],
+    },
+  ];
+  const projectApp = (p) => "project-" + p.id;
+
+  // darken or lighten a #rrggbb color by f (-1..1)
+  function shade(hex, f) {
+    const n = parseInt(hex.slice(1), 16);
+    const ch = (v) => Math.round(f < 0 ? v * (1 + f) : v + (255 - v) * f);
+    return "#" + [n >> 16, (n >> 8) & 255, n & 255].map((v) => ch(v).toString(16).padStart(2, "0")).join("");
+  }
+  const folderIcon = (c) => svg(
+    `<rect x="2" y="6" width="12" height="5" fill="#0b0b0b"/><rect x="3" y="7" width="10" height="4" fill="${shade(c, -0.18)}"/>` +
+    `<rect x="2" y="9" width="28" height="19" fill="#0b0b0b"/><rect x="3" y="10" width="26" height="17" fill="${c}"/>` +
+    `<rect x="3" y="10" width="26" height="2" fill="${shade(c, 0.45)}"/><rect x="3" y="12" width="1" height="15" fill="${shade(c, 0.3)}"/>` +
+    `<rect x="3" y="25" width="26" height="2" fill="${shade(c, -0.35)}"/>`);
+
+  // Explorer "View" buttons: Large Icons and Details
+  const VIEW_ICONS = {
+    icons: svg(`<rect x="4" y="5" width="10" height="9" fill="#2a7fd4"/><rect x="18" y="5" width="10" height="9" fill="#2a7fd4"/><rect x="4" y="18" width="10" height="9" fill="#2a7fd4"/><rect x="18" y="18" width="10" height="9" fill="#2a7fd4"/>`),
+    details: svg(`<rect x="3" y="5" width="5" height="4" fill="#2a7fd4"/><rect x="10" y="6" width="19" height="2" fill="#0b0b0b"/><rect x="3" y="14" width="5" height="4" fill="#2a7fd4"/><rect x="10" y="15" width="19" height="2" fill="#0b0b0b"/><rect x="3" y="23" width="5" height="4" fill="#2a7fd4"/><rect x="10" y="24" width="19" height="2" fill="#0b0b0b"/>`),
+  };
+  const COLUMNS = [["name", "Name"], ["kind", "Type"], ["tech", "Built with"], ["year", "Year"]];
+
+  function projectsBody() {
+    return `
+      <div class="explorer" data-view="icons">
+        <div class="ex-toolbar" role="toolbar" aria-label="View">
+          <button class="bevel ex-view" data-view="icons" aria-pressed="true">${VIEW_ICONS.icons}Large Icons</button>
+          <button class="bevel ex-view" data-view="details" aria-pressed="false">${VIEW_ICONS.details}Details</button>
+        </div>
+        <div class="ex-address">
+          <span class="ex-label">Address</span>
+          <span class="ex-path bevel-in">${ICONS.projects}<span>C:\\My Documents\\Projects</span></span>
+        </div>
+        <div class="ex-pane">
+          <div class="ex-head">
+            ${COLUMNS.map(([key, label]) => `<button class="bevel ex-col" data-sort="${key}">${label}<i aria-hidden="true"></i></button>`).join("")}
+          </div>
+          <ul class="ex-grid" role="listbox" aria-label="Projects">
+            ${PROJECTS.map((p) => `
+              <li role="none">
+                <button class="ex-item" role="option" aria-selected="false" data-project="${p.id}"
+                  title="${esc(p.name)}${p.kind ? " · " + esc(p.kind) : ""}">
+                  ${folderIcon(p.color)}<span class="ex-name">${esc(p.name)}</span><span class="ex-kind">${esc(p.kind || "")}</span><span class="ex-tech">${esc(p.tech || "")}</span><span class="ex-year">${p.year || ""}</span>
+                </button>
+              </li>`).join("")}
+          </ul>
+        </div>
+        <div class="ex-status">
+          <span class="ex-count bevel-in">${PROJECTS.length} object(s)</span>
+          <span class="ex-hint bevel-in">${finePointer() ? "Double-click a folder to open it" : "Tap a folder to open it"}</span>
+        </div>
+      </div>`;
+  }
+
+  function projectsInit(win) {
+    const explorer = $(".explorer", win);
+    const grid = $(".ex-grid", win);
+    const items = () => [...grid.querySelectorAll(".ex-item")];
+    const count = $(".ex-count", win);
+    const hint = $(".ex-hint", win);
+    const byId = (id) => PROJECTS.find((p) => p.id === id);
+    let sort = { key: null, dir: 1 };
+
+    function setView(view) {
+      explorer.dataset.view = view;
+      win.querySelectorAll(".ex-view").forEach((b) => b.setAttribute("aria-pressed", b.dataset.view === view ? "true" : "false"));
+      store.set("projectsView", view);
+    }
+    setView(store.get("projectsView") === "details" ? "details" : "icons");
+
+    // click a column header to sort by it; click again to reverse
+    function sortBy(key) {
+      sort = { key, dir: sort.key === key ? -sort.dir : 1 };
+      const val = (p) => (key === "year" ? p.year || 0 : String(p[key] || "").toLowerCase());
+      const order = [...PROJECTS].sort((a, b) => (val(a) > val(b) ? 1 : val(a) < val(b) ? -1 : 0) * sort.dir);
+      for (const p of order) grid.appendChild(grid.querySelector(`[data-project="${p.id}"]`).parentElement);
+      win.querySelectorAll(".ex-col").forEach((c) => {
+        c.dataset.dir = c.dataset.sort === key ? (sort.dir > 0 ? "asc" : "desc") : "";
+      });
+    }
+
+    function select(btn) {
+      items().forEach((b) => b.setAttribute("aria-selected", b === btn ? "true" : "false"));
+      if (!btn) { count.textContent = `${PROJECTS.length} object(s)`; return; }
+      const p = byId(btn.dataset.project);
+      count.textContent = "1 object(s) selected";
+      hint.textContent = [p.name, p.kind, p.year].filter(Boolean).join(" · ");
+    }
+    // open a project's window beside this folder (or just below-right of it if there's no room)
+    function openProject(btn) {
+      const id = projectApp(byId(btn.dataset.project));
+      const fresh = !wins.has(id);
+      open(id);
+      if (!fresh || isPhone()) return;
+      const el = wins.get(id).el;
+      const area = desktop.getBoundingClientRect();
+      // stagger each additional open project window so they don't stack exactly
+      const others = [...wins.keys()].filter((k) => k.startsWith("project-") && k !== id).length;
+      const off = 26 * (others % 6);
+      const right = win.offsetLeft + win.offsetWidth + 10;
+      const besides = right + el.offsetWidth <= area.width - 8;
+      const x = besides ? right + off : Math.min(win.offsetLeft + 40 + off, area.width - el.offsetWidth - 8);
+      const y = Math.min(win.offsetTop + (besides ? 0 : 40) + off, area.height - el.offsetHeight - 8);
+      el.style.left = Math.max(8, x) + "px";
+      el.style.top = Math.max(8, y) + "px";
+    }
+
+    win.addEventListener("click", (e) => {
+      const view = e.target.closest(".ex-view");
+      if (view) { setView(view.dataset.view); return; }
+      const col = e.target.closest(".ex-col");
+      if (col) { sortBy(col.dataset.sort); return; }
+      const btn = e.target.closest(".ex-item");
+      if (!btn) { if (e.target.closest(".ex-grid")) select(null); return; }
+      select(btn);
+      if (!finePointer() || e.detail === 0) openProject(btn); // touch, or Enter/Space
+    });
+    win.addEventListener("dblclick", (e) => {
+      const btn = e.target.closest(".ex-item");
+      if (btn && finePointer()) openProject(btn);
+    });
+    // arrow keys move between folders (one column in Details view)
+    grid.addEventListener("keydown", (e) => {
+      const list = items();
+      const i = list.indexOf(document.activeElement);
+      if (i < 0) return;
+      const cols = explorer.dataset.view === "details" ? 1 : Math.max(1, Math.round(grid.clientWidth / list[0].offsetWidth));
+      const step = { ArrowRight: 1, ArrowLeft: -1, ArrowDown: cols, ArrowUp: -cols }[e.key];
+      if (!step) return;
+      e.preventDefault();
+      const next = list[Math.min(list.length - 1, Math.max(0, i + step))];
+      next.focus();
+      select(next);
+    });
+  }
+
+  function projectBody(p) {
+    const rows = [["Type", p.kind], ["Built with", p.tech], ["Year", p.year]].filter(([, v]) => v);
+    return `
+      <div class="project">
+        <div class="pj-art bevel-in">
+          ${p.art || `<img src="${p.cover || `ProjectSlides/thumbs/ProjectsSlides-0${p.card}.jpg`}" alt="${esc(p.name)} cover art">`}
+        </div>
+        <div class="pj-info">
+          <h3 class="pj-title">${folderIcon(p.color)}<span>${esc(p.name)}</span></h3>
+          ${rows.length ? `<dl class="pj-meta">${rows.map(([k, v]) => `<dt>${k}</dt><dd>${esc(String(v))}</dd>`).join("")}</dl>` : ""}
+          <p class="pj-desc">${p.desc ? esc(p.desc) : `<span class="pj-soon">Details coming soon.</span>`}</p>
+          ${(p.actions || []).length + p.links.length ? `<div class="pj-links">${(p.actions || []).map(([label, app]) =>
+            app.startsWith("file:")
+              ? `<button class="bevel pj-btn" data-termfile="${esc(app.slice(5))}">${esc(label)}</button>`
+              : `<button class="bevel pj-btn" data-open="${app}">${esc(label)}</button>`).join("")}${p.links.map(([label, href]) =>
+            `<a class="bevel pj-btn" href="${esc(href)}"${/^https?:/.test(href) ? ' target="_blank" rel="noopener"' : ""}>${esc(label)}</a>`).join("")}</div>` : ""}
+          <div class="pj-close"><button class="bevel pj-btn" data-close>Close</button></div>
+        </div>
+      </div>`;
+  }
+
+  /* ---------- MOOP language manual ---------- */
+  // Same text as the README on the Moop repo's language-manual branch (dev/build_manual.py).
+  function manualBody() {
+    return `
+      <div class="manual">
+        <div class="mn-toolbar">
+          <button class="bevel" data-mn="top">Contents</button>
+          <a class="bevel" href="assets/moop/MOOP.pdf" target="_blank" rel="noopener">Open the PDF</a>
+          <a class="bevel" href="https://github.com/anavianm/Moop/tree/language-manual" target="_blank" rel="noopener">On GitHub</a>
+          <span class="ph-sep" aria-hidden="true"></span>
+          <button class="bevel" data-open="terminal">Try it in the Terminal</button>
+        </div>
+        <article class="mn-doc" tabindex="0" aria-label="MOOP language manual">Loading…</article>
+      </div>`;
+  }
+
+  function manualInit(win) {
+    const doc = $(".mn-doc", win);
+    fetch("assets/moop/manual.html?v=1")
+      .then((r) => { if (!r.ok) throw new Error(); return r.text(); })
+      .then((html) => { doc.innerHTML = html; })
+      .catch(() => { doc.textContent = "Couldn't load the manual. Try the PDF instead."; });
+    // contents links scroll inside the window instead of changing the page address
+    win.addEventListener("click", (e) => {
+      if (e.target.closest('[data-mn="top"]')) { doc.scrollTo({ top: 0, behavior: "smooth" }); return; }
+      const a = e.target.closest('a[href^="#"]');
+      if (!a) return;
+      e.preventDefault();
+      const target = doc.querySelector(`[id="${CSS.escape(a.getAttribute("href").slice(1))}"]`);
+      if (target) {
+        const top = doc.scrollTop + target.getBoundingClientRect().top - doc.getBoundingClientRect().top - 8;
+        doc.scrollTo({ top, behavior: "smooth" });
+      }
+    });
+  }
+
+  /* ---------- resume: a Word 97-style document window ---------- */
+  // Menus and most toolbar buttons are scenery; Zoom and Print work.
+  const tb = (body) => `<span class="rs-tb" aria-hidden="true">${svg(body)}</span>`;
+  const TB = {
+    new: tb(`<rect x="8" y="4" width="16" height="24" fill="#0b0b0b"/><rect x="9" y="5" width="14" height="22" fill="#fff"/>`),
+    open: tb(`<rect x="3" y="10" width="26" height="16" fill="#0b0b0b"/><rect x="4" y="11" width="24" height="14" fill="#f2c94c"/><rect x="3" y="7" width="10" height="4" fill="#0b0b0b"/>`),
+    save: tb(`<rect x="5" y="5" width="22" height="22" fill="#0b0b0b"/><rect x="6" y="6" width="20" height="20" fill="#2a5fb4"/><rect x="10" y="6" width="12" height="8" fill="#e8e8e8"/><rect x="10" y="18" width="12" height="8" fill="#0b0b0b"/>`),
+    print: svg(`<rect x="8" y="4" width="16" height="10" fill="#0b0b0b"/><rect x="9" y="5" width="14" height="9" fill="#fff"/><rect x="4" y="13" width="24" height="11" fill="#0b0b0b"/><rect x="5" y="14" width="22" height="9" fill="#c3c3c3"/><rect x="22" y="16" width="3" height="2" fill="#3fc46b"/><rect x="9" y="22" width="14" height="6" fill="#fff"/>`),
+    cut: tb(`<rect x="14" y="4" width="2" height="14" fill="#0b0b0b"/><rect x="18" y="4" width="2" height="14" fill="#0b0b0b"/><rect x="8" y="18" width="7" height="7" fill="#2a5fb4"/><rect x="19" y="18" width="7" height="7" fill="#2a5fb4"/>`),
+    copy: tb(`<rect x="4" y="4" width="14" height="18" fill="#0b0b0b"/><rect x="5" y="5" width="12" height="16" fill="#fff"/><rect x="14" y="10" width="14" height="18" fill="#0b0b0b"/><rect x="15" y="11" width="12" height="16" fill="#fff"/>`),
+    paste: tb(`<rect x="6" y="6" width="18" height="22" fill="#0b0b0b"/><rect x="7" y="7" width="16" height="20" fill="#a0652b"/><rect x="11" y="4" width="8" height="5" fill="#0b0b0b"/><rect x="12" y="12" width="14" height="16" fill="#fff"/>`),
+    undo: tb(`<rect x="8" y="10" width="14" height="3" fill="#2a5fb4"/><rect x="20" y="10" width="3" height="12" fill="#2a5fb4"/><rect x="5" y="8" width="3" height="7" fill="#2a5fb4"/>`),
+  };
+  const fmt = (label, cls = "") => `<span class="rs-tb rs-fmt ${cls}" aria-hidden="true">${label}</span>`;
+  const RESUME_TITLE = "Resume.doc - Microsoft Word";
+  const PAGE_W = 816; // US Letter at 96 dpi
+  const PAGE_H = 1056;
+
+  function resumeBody() {
+    const ticks = Array.from({ length: 8 }, (_, i) => `<span style="left:${i * 96}px">${i || ""}</span>`).join("");
+    return `
+      <div class="rs-word">
+        <div class="rs-menu" aria-hidden="true">
+          ${["File", "Edit", "View", "Insert", "Format", "Tools", "Table", "Window", "Help"].map((m) => `<span><u>${m[0]}</u>${m.slice(1)}</span>`).join("")}
+        </div>
+        <div class="rs-bars">
+          <div class="rs-bar">
+            ${TB.new}${TB.open}${TB.save}<span class="rs-sep" aria-hidden="true"></span>
+            <button class="rs-tb rs-print" title="Print the resume" aria-label="Print the resume">${TB.print}</button>
+            <span class="rs-sep" aria-hidden="true"></span>${TB.cut}${TB.copy}${TB.paste}<span class="rs-sep" aria-hidden="true"></span>${TB.undo}
+            <span class="rs-sep" aria-hidden="true"></span>
+            <label class="rs-zoom-label">Zoom
+              <select class="rs-zoom" aria-label="Zoom">
+                <option value="fit">Page Width</option><option value="0.5">50%</option><option value="0.75">75%</option>
+                <option value="1">100%</option><option value="1.25">125%</option>
+              </select>
+            </label>
+          </div>
+          <div class="rs-bar" aria-hidden="true">
+            <span class="rs-box" style="width:80px">Normal</span>
+            <span class="rs-box" style="width:128px">Times New Roman</span>
+            <span class="rs-box" style="width:34px">12</span>
+            <span class="rs-sep"></span>${fmt("B", "b")}${fmt("I", "i")}${fmt("U", "u")}
+            <span class="rs-sep"></span>${fmt("≡", "al")}${fmt("≡", "ac")}${fmt("≡", "ar")}${fmt("≡")}
+            <span class="rs-sep"></span>${fmt("⋮≡")}${fmt("1≡")}
+          </div>
+        </div>
+        <div class="rs-ruler" aria-hidden="true"><div class="rs-ruler-in">${ticks}</div></div>
+        <div class="rs-desk">
+          <article class="rs-page" aria-label="Resume">Loading…</article>
+        </div>
+        <div class="rs-status" aria-hidden="true">
+          <span class="rs-pg">Page 1</span><span>Sec 1</span><span class="rs-of">1/1</span>
+          <span class="rs-gap"></span><span>REC</span><span>TRK</span><span>EXT</span><span>OVR</span>
+          <span class="rs-lang">English (U.S.)</span>
+        </div>
+      </div>`;
+  }
+
+  function resumeInit(win) {
+    const desk = $(".rs-desk", win);
+    const page = $(".rs-page", win);
+    const zoomSel = $(".rs-zoom", win);
+    const ruler = $(".rs-ruler-in", win);
+    let zoom = 1;
+
+    function applyZoom() {
+      const v = zoomSel.value;
+      // phones: the page reflows to the screen at normal size instead of shrinking a Letter page
+      zoom = isPhone() ? 1 : v === "fit" ? Math.max(0.3, Math.min(1.5, (desk.clientWidth - 32) / PAGE_W)) : +v;
+      page.style.zoom = zoom;
+      ruler.style.transform = `scale(${zoom})`;
+      ruler.style.left = Math.max(16, (desk.clientWidth - PAGE_W * zoom) / 2) + "px";
+      status();
+    }
+    function status() {
+      const pages = Math.max(1, Math.ceil(page.offsetHeight / PAGE_H));
+      const at = Math.min(pages, Math.floor(desk.scrollTop / (PAGE_H * zoom)) + 1);
+      $(".rs-pg", win).textContent = `Page ${at}`;
+      $(".rs-of", win).textContent = `${at}/${pages}`;
+    }
+    zoomSel.addEventListener("change", applyZoom);
+    desk.addEventListener("scroll", status);
+    new ResizeObserver(() => { if (zoomSel.value === "fit") applyZoom(); }).observe(desk);
+
+    // Print just the page, in its own frame, so the desktop around it isn't printed
+    $(".rs-print", win).addEventListener("click", () => {
+      const frame = document.createElement("iframe");
+      frame.style.cssText = "position:fixed;width:0;height:0;border:0;opacity:0";
+      document.body.appendChild(frame);
+      const doc = frame.contentDocument;
+      doc.open();
+      doc.write(`<!doctype html><html><head><title>Maxwell Anavian Resume</title>
+        <link rel="stylesheet" href="${new URL("assets/desktop.css", location.href)}">
+        <style>@page { size: letter; margin: 0.5in } html, body { background: #fff; margin: 0; overflow: visible; height: auto }
+        .rs-page { box-shadow: none !important; width: auto !important; min-height: 0 !important; padding: 0 !important; zoom: 1 !important }</style>
+        </head><body><article class="rs-page">${page.innerHTML}</article></body></html>`);
+      doc.close();
+      frame.onload = () => { frame.contentWindow.focus(); frame.contentWindow.print(); setTimeout(() => frame.remove(), 1000); };
+    });
+
+    fetch("assets/resume.html?v=1")
+      .then((r) => { if (!r.ok) throw new Error(); return r.text(); })
+      .then((html) => { page.innerHTML = html; applyZoom(); })
+      .catch(() => { page.textContent = "Couldn't load the resume."; });
+    if (isPhone()) zoomSel.value = "fit";
+    applyZoom();
+  }
+
   /* ---------- apps ---------- */
   const soon = (what) => `
     <div class="soon">
@@ -831,13 +1160,26 @@ Edits last until you reload the page.
         </div>`,
     },
     about:    { title: "About me.txt", w: 460, h: 320, body: () => soon("About me") },
-    projects: { title: "Projects",     w: 620, h: 440, body: () => soon("Projects") },
+    projects: { title: "Projects", w: 720, h: 400, body: projectsBody, init: projectsInit },
     photos:   { title: "Photos", w: 880, h: 660, plain: true, body: photosBody, init: photosInit },
-    resume:   { title: "Resume.pdf",   w: 620, h: 560, body: () => soon("Resume") },
+    resume:   { title: RESUME_TITLE, w: 920, h: 680, plain: true, body: resumeBody, init: resumeInit },
     contact:  { title: "Contact",      w: 400, h: 300, body: () => soon("Contact") },
     terminal: { title: "Terminal - MOOP", w: 960, h: 620, plain: true, body: termBody, init: termInit },
     hanoi:    { title: "Tower of Hanoi", w: 640, h: 500, plain: true, body: hanoiBody, init: hanoiInit },
+    manual:   { title: "MOOP Language Manual", w: 720, h: 620, plain: true, body: manualBody, init: manualInit },
   };
+  // one details window per project, each with its own colored folder icon
+  for (const p of PROJECTS) {
+    APPS[projectApp(p)] = {
+      title: p.name, w: 560, h: "auto", plain: true, body: () => projectBody(p),
+      // "file:" actions open that MOOP file in the Terminal
+      init: (win) => win.addEventListener("click", (e) => {
+        const b = e.target.closest("[data-termfile]");
+        if (b) openInTerminal(b.dataset.termfile);
+      }),
+    };
+    ICONS[projectApp(p)] = folderIcon(p.color);
+  }
   const DESKTOP_ORDER = ["about", "projects", "photos", "resume", "contact", "terminal", "hanoi"];
   const LABEL = { about: "About me", projects: "Projects", photos: "Photos", resume: "Resume", contact: "Contact", terminal: "Terminal", hanoi: "Hanoi" };
 
@@ -1052,7 +1394,7 @@ Edits last until you reload the page.
 
   /* ---------- start menu ---------- */
   const startItems = [
-    ["welcome", "Welcome"], ...DESKTOP_ORDER.map((id) => [id, LABEL[id]]),
+    ["welcome", "Welcome"], ...DESKTOP_ORDER.map((id) => [id, LABEL[id]]), ["manual", "MOOP manual"],
     ["sep"], ["wallpaper", "Change wallpaper"], ["shutdown", "Shut down…"],
   ];
   $("#startList").innerHTML = startItems.map(([id, label]) =>
